@@ -104,7 +104,6 @@ Create a function that toggles the superjob status when onClick()
   Get the data-attribute from the application clicked
   Assign that superjob status on its object to true or false if checkbox is ticked or not
 
-
 ```
 
 Obviously, after coding for a while, I had to re-arrange blocks and come up with solutions for a few other problems. Overall, it really helped me with speeding up the workflow.

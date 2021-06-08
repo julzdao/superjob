@@ -1,0 +1,31 @@
+:root {
+  --main-font: "Saira", sans-serif;
+}
+
+body {
+  font-family: var(--main-font);
+  background-image: url(https://image.freepik.com/free-vector/background-gradient-green-tones_23-2148373476.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Header Styles */
+
+#header-container {
+  width: 80em;
+  height: 8em;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.253);
+  margin: 2em auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-title {
+  font-weight: 700;
+  font-size: 1.8em;
+  color: rgb(34, 34, 34);
+}
