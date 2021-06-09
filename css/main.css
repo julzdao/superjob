@@ -79,7 +79,7 @@ main {
 
 #pop-up {
   width: 30em;
-  height: 20em;
+  height: 28em;
   border-radius: 12px;
   left: calc(50% - 15em);
   position: absolute;
@@ -90,19 +90,19 @@ main {
   /* background-color: tomato; */
   width: 90%;
   height: 100%;
-  margin: 0 auto;
+  margin: 1em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 form label {
-  width: 48%;
-  height: 3em;
+  width: 70%;
+  height: 0.3em;
   /* background-color: yellow; */
 }
 
 form input {
-  width: 48%;
+  width: 70%;
   height: 2.5em;
 }
