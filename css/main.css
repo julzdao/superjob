@@ -11,6 +11,12 @@ body {
   height: 100vh;
 }
 
+/* Common styles */
+
+.hide {
+  display: none;
+}
+
 /* Header Styles */
 
 #header-container {

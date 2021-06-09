@@ -8,5 +8,8 @@
   - [ ] Complete a css design tutorial for glassmorphism
 - [x] Build one single column for storing the applications
   - [x] Add text + button
-  - [ ] Add the form for storing the information for each application
+  - [x] Add the form for storing the information for each application
+- [ ] Get one job Application to work
+  - [x] Show or hide the pop-up when clicking the plus button
+  - [ ]
 - [ ] Build the rest columns
