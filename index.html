@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JobJungle</title>
+    <title>Superjob</title>
 
     <!-- Reset CSS -->
     <link rel="stylesheet" href="css/reset.css" />
@@ -20,11 +20,34 @@
   <body>
     <header>
       <div id="header-container">
-        <h1 id="main-title">JobJungle</h1>
+        <h1 id="main-title">Superjob</h1>
       </div>
     </header>
     <main>
-      <div class="stage-container" id="wish-container"></div>
+      <div id="pop-up" class="hide">
+        <form>
+          <label for="company">Company name:</label><br />
+          <input type="text" id="company" name="company" /><br />
+          <label for="position">Position:</label><br />
+          <input type="text" id="position" name="position" />
+          <label for="location">Location:</label><br />
+          <input type="text" id="location" name="location" />
+          <label for="super">SuperJob:</label><br />
+          <input type="checkbox" id="super" name="super" />
+          <input type="submit" />
+        </form>
+      </div>
+      <div class="stage-container" id="wish-container">
+        <div class="stage-text">
+          <h2 class="stage-title">wish list</h2>
+          <p id="wish-counter">6 jobs</p>
+        </div>
+        <button class="btn" id="btn-wish">+</button>
+      </div>
+      <div class="stage-container" id="apply-container"></div>
+      <div class="stage-container" id="phone-container"></div>
+      <div class="stage-container" id="interview-container"></div>
+      <div class="stage-container" id="offer-container"></div>
     </main>
   </body>
 </html>
