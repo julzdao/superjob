@@ -4,12 +4,21 @@ const popUp = document.getElementById("pop-up");
 // Create an empty array for storing all Applications
 let applicationsArr = [];
 // Create function Constructor for new Applications (company, position, location, salary, superjob)
+function Application(company, position, location, superjob) {
+  this.company = company;
+  this.position = position;
+  this.location = location;
+}
 
-//   this company name = company
-//   this position name = position
-//   this location name = location
 // Create function inside the prototype for Application for the superjob checkbox
 //   if (superjob) then tick the checkbox
+Application.prototype.superJob = function() {
+  // if checkbox is ticked, then superjob is true
+}
+
+function addApplicationToList() {
+  const 
+}
 // Create function for adding new Applications to the ApplicationArray
 //   Create new const for currentApplication = new App(newCompany, newPosition, newLocation, newSalary, newSuperjob)
 //   const applicationArr.push(currentApplication)

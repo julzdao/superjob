@@ -89,7 +89,6 @@ Create function Constructor for new Applications (company, position, location, s
   this company name = company
   this position name = position
   this location name = location
-  this salary value = salary
 Create function inside the prototype for Application for the superjob checkbox
   if (superjob) then tick the checkbox
 Create function for adding new Applications to the ApplicationArray
