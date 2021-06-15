@@ -118,6 +118,7 @@ This is the first solution I came up with before any code was written. Even thou
 ### Useful Sources
 
 - [How to get values from an HTML form](https://stackoverflow.com/questions/3547035/javascript-getting-html-form-values)
+- [How to get the checked value from a checkbox](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/)
 
 ## Approaches
 

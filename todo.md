@@ -10,6 +10,11 @@
   - [x] Add text + button
   - [x] Add the form for storing the information for each application
 - [ ] Get one job Application to work
+
   - [x] Show or hide the pop-up when clicking the plus button
-  - [ ]
+  - [ ] How to add the prototype when clicking the superjob
+    - How to solve the checkbox story?
+      - How to know when a checkbox is ticked?
+  - [ ] How to add new applications to the arr
+
 - [ ] Build the rest columns
