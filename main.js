@@ -4,12 +4,6 @@ const superBox = document.getElementById("super");
 const appForm = document.getElementById("app-form").elements;
 const submitBtn = document.getElementById("submit");
 
-// Variables for inputs
-let newCompany = appForm["company"].value;
-let newPosition = appForm["position"].value;
-let newLocation = appForm["location"].value;
-let newSuper = appForm["super"].checked;
-
 // Create an empty array for storing all Applications
 let applicationsArr = [];
 
@@ -32,6 +26,12 @@ Application.prototype.superJob = function () {
 };
 
 function addApplicationToList() {
+  // Variables for inputs
+  let newCompany = appForm["company"].value;
+  let newPosition = appForm["position"].value;
+  let newLocation = appForm["location"].value;
+  let newSuper = appForm["super"].checked;
+
   const currentApplication = new Application(
     newCompany,
     newPosition,
@@ -39,6 +39,13 @@ function addApplicationToList() {
     newSuper
   );
   applicationsArr.push(currentApplication);
+}
+
+function emptyForm() {
+  appForm["company"].value = "";
+  appForm["position"].value = "";
+  appForm["location"].value = "";
+  appForm["super"].checked = "";
 }
 
 // Create function for adding new Applications to the ApplicationArray
@@ -52,10 +59,13 @@ function addApplicationToList() {
 //   Assign that superjob status on its object to true or false if checkbox is ticked or not
 // --------EVENT LISTENERS----------//
 
-submitBtn.addEventListener("submit", function () {
+submitBtn.addEventListener("click", function () {
   addApplicationToList();
+  emptyForm();
+  popUp.classList.add("hide");
   console.log(applicationsArr);
 });
+console.log(applicationsArr);
 
 // Show up the pop up for the form
 allBtns.forEach((b) => {

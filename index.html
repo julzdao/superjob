@@ -25,7 +25,7 @@
     </header>
     <main>
       <div id="pop-up" class="hide">
-        <form id="app-form">
+        <form id="app-form" onsubmit="addApplicationToList()">
           <label for="company">Company name:</label><br />
           <input type="text" id="company" name="company" /><br />
           <label for="position">Position:</label><br />
@@ -34,8 +34,8 @@
           <input type="text" id="location" name="location" />
           <label for="super">SuperJob:</label><br />
           <input type="checkbox" id="super" name="super" />
-          <button type="submit" />
         </form>
+        <button type="submit" id="submit">Submit</button>
       </div>
       <div class="stage-container" id="wish-container">
         <div class="stage-text">
