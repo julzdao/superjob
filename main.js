@@ -64,6 +64,7 @@ submitBtn.addEventListener("click", function () {
   emptyForm();
   popUp.classList.add("hide");
   console.log(applicationsArr);
+  console.log(Application.prototype.superJob);
 });
 console.log(applicationsArr);
 
