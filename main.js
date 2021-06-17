@@ -25,11 +25,22 @@ function Application(company, position, location, superjob) {
 
 // Itinerate through the applicationArr everytime we push the submit button
 function appendApplication() {
-  for (let i = 0; i < applicationsArr.length; i++) {
-    let newJobDiv = document.createElement("div");
-    newJobDiv.className = "new-job";
-    stageContainers[0].appendChild(newJobDiv);
-  }
+  let newJobDiv = document.createElement("div");
+  let companyText = document.createElement("p");
+  let positionText = document.createElement("p");
+  let locationText = document.createElement("p");
+  let superCheckbox = document.createElement("input");
+
+  companyText.innerHTML = appForm["company"].value;
+  positionText.innerHTML = appForm["position"].value;
+  locationText.innerHTML = appForm["location"].value;
+
+  newJobDiv.className = "new-job";
+  newJobDiv.appendChild(companyText);
+  newJobDiv.appendChild(positionText);
+  newJobDiv.appendChild(locationText);
+
+  stageContainers[0].appendChild(newJobDiv);
 }
 // Append a new Application to the column
 // Create div for each application with Company, Position, Location and Superjob checkbox
