@@ -12,9 +12,10 @@
 - [ ] Get one job Application to work
 
   - [x] Show or hide the pop-up when clicking the plus button
-  - [ ] How to add the prototype when clicking the superjob
+  - [x] How to add the prototype when clicking the superjob
     - How to solve the checkbox story?
       - How to know when a checkbox is ticked?
-  - [ ] How to add new applications to the arr
+  - [x] How to add new applications to the arr
+  - [ ] Append each application to the current column
 
 - [ ] Build the rest columns

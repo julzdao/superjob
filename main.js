@@ -12,18 +12,19 @@ function Application(company, position, location, superjob) {
   this.company = company;
   this.position = position;
   this.location = location;
+  this.checkSuper = function () {
+    // if checkbox is ticked, then superjob is true
+    if (superjob) {
+      return true;
+    } else {
+      return false;
+    }
+  };
 }
 
 // Create function inside the prototype for Application for the superjob checkbox
 //   if (superjob) then tick the checkbox
-Application.prototype.superJob = function () {
-  // if checkbox is ticked, then superjob is true
-  if (newSuper) {
-    this.superjob = true;
-  } else {
-    this.superjob = false;
-  }
-};
+// Application.prototype.superJob = function () {};
 
 function addApplicationToList() {
   // Variables for inputs
@@ -45,7 +46,7 @@ function emptyForm() {
   appForm["company"].value = "";
   appForm["position"].value = "";
   appForm["location"].value = "";
-  appForm["super"].checked = "";
+  appForm["super"].checked = false;
 }
 
 // Create function for adding new Applications to the ApplicationArray
@@ -61,10 +62,10 @@ function emptyForm() {
 
 submitBtn.addEventListener("click", function () {
   addApplicationToList();
+  console.log(applicationsArr);
+  console.log(applicationsArr[0].checkSuper());
   emptyForm();
   popUp.classList.add("hide");
-  console.log(applicationsArr);
-  console.log(Application.prototype.superJob);
 });
 console.log(applicationsArr);
 
