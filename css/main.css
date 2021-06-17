@@ -81,6 +81,13 @@ main {
   cursor: pointer;
 }
 
+.new-job {
+  width: 14em;
+  height: 8em;
+  background-color: pink;
+  border-radius: 5px;
+}
+
 /* Pop-up form */
 
 #pop-up {

@@ -3,6 +3,7 @@ const popUp = document.getElementById("pop-up");
 const superBox = document.getElementById("super");
 const appForm = document.getElementById("app-form").elements;
 const submitBtn = document.getElementById("submit");
+const stageContainers = [...document.getElementsByClassName("stage-container")];
 
 // Create an empty array for storing all Applications
 let applicationsArr = [];
@@ -22,9 +23,17 @@ function Application(company, position, location, superjob) {
   };
 }
 
-// Create function inside the prototype for Application for the superjob checkbox
-//   if (superjob) then tick the checkbox
-// Application.prototype.superJob = function () {};
+// Itinerate through the applicationArr everytime we push the submit button
+function appendApplication() {
+  for (let i = 0; i < applicationsArr.length; i++) {
+    let newJobDiv = document.createElement("div");
+    newJobDiv.className = "new-job";
+    stageContainers[0].appendChild(newJobDiv);
+  }
+}
+// Append a new Application to the column
+// Create div for each application with Company, Position, Location and Superjob checkbox
+// Append it as a child to the wish list container each loop with all the items in the arr
 
 function addApplicationToList() {
   // Variables for inputs
@@ -49,9 +58,6 @@ function emptyForm() {
   appForm["super"].checked = false;
 }
 
-// Create function for adding new Applications to the ApplicationArray
-//   Create new const for currentApplication = new App(newCompany, newPosition, newLocation, newSalary, newSuperjob)
-//   const applicationArr.push(currentApplication)
 // Add event listener for removing each application
 //   Find the index of the application in the applicationArr given the data-attribute
 //   Splice the array so you remove only that element
@@ -62,6 +68,7 @@ function emptyForm() {
 
 submitBtn.addEventListener("click", function () {
   addApplicationToList();
+  appendApplication();
   console.log(applicationsArr);
   console.log(applicationsArr[0].checkSuper());
   emptyForm();

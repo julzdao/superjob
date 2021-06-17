@@ -18,4 +18,11 @@
   - [x] How to add new applications to the arr
   - [ ] Append each application to the current column
 
+pseudocode
+
+// Itinerate through the applicationArr everytime we push the submit button
+// Append a new Application to the column
+// Create div for each application with Company, Position, Location and Superjob checkbox
+// Append it as a child to the wish list container each loop with all the items in the arr
+
 - [ ] Build the rest columns
