@@ -5,6 +5,7 @@ const appForm = document.getElementById("app-form").elements;
 const submitBtn = document.getElementById("submit");
 const stageContainers = [...document.getElementsByClassName("stage-container")];
 
+console.log(appForm);
 // Create an empty array for storing all Applications
 let applicationsArr = [];
 

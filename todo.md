@@ -17,6 +17,7 @@
       - How to know when a checkbox is ticked?
   - [x] How to add new applications to the arr
   - [ ] Append each application to the current column
+    - [ ]
 
 pseudocode
 
