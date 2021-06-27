@@ -10,6 +10,7 @@ Go to the [Live Preview](#);
 - [The challenge](#the-challenge)
 - [Key Features](#key-features)
 - [My process](#my-process)
+  - [Stable Architecture](#stable-architecture)
   - [Understand the problem](#understand-the-problem)
   - [Pseudocode](#pseudocode)
   - [Mindmap](#mindmap)
@@ -47,6 +48,11 @@ With a little bit of research, I saw a few other apps out there with a similar i
 - Scroll infinitely in each stage
 
 ## My Process
+
+### Stable Architecture
+
+- README.md
+- index.html
 
 > Thinking like a Programmer is about having fun with problem-solving
 
