@@ -54,6 +54,40 @@ With a little bit of research, I saw a few other apps out there with a similar i
 - README.md
 - index.html
 
+- assets/
+
+  - icons/
+  - images/
+
+- css/
+  -style.css
+
+- sass/
+
+  - main.scss (Import partials)
+  - 0_vendors/
+  - 1_base/
+    -\_reset.scss
+    -\_colors.scss
+    -\_typography.scss
+    -\_global.scss
+  - 2_utils/
+    -\_mixins.scss
+  - 3_layout/
+    -\_footer.scss
+    -\_header.scss
+  - 4_module/
+    -\_buttons.scss
+    -\_forms.scss
+    -\_tags.scss
+    -\_card.scss
+    -\_stage.scss
+  - 5_state/
+    -\_state.scss
+
+- scripts/
+  -script.js
+
 > Thinking like a Programmer is about having fun with problem-solving
 
 ### Understand the problem
