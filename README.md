@@ -77,7 +77,7 @@ With a little bit of research, I saw a few other apps out there with a similar i
   - 3_layout/
     - \_footer.scss
     - \_header.scss
-  - 4_module/
+  - 4_modules/
     - \_buttons.scss
     - \_forms.scss
     - \_tags.scss
