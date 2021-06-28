@@ -65,26 +65,28 @@ With a little bit of research, I saw a few other apps out there with a similar i
 
 - sass/
 
-  - main.scss (Import and exports partials)
-  - 0_vendors/
-  - 1_base/
-    - \_reset.scss
-    - \_colors.scss
-    - \_typography.scss
-    - \_global.scss
-  - 2_utils/
-    - \_mixins.scss
-  - 3_layout/
-    - \_footer.scss
-    - \_header.scss
-  - 4_modules/
-    - \_buttons.scss
-    - \_forms.scss
-    - \_tags.scss
-    - \_card.scss
-    - \_stage.scss
-  - 5_state/
-    - \_state.scss
+  - main.scss (Communicates with the pipe (_index.scss))
+    - partials/ 
+      - _index.scss (Acts as a pipe which communicates all templates)
+      - 0_vendors/
+      - 1_base/
+        - \_reset.scss
+        - \_colors.scss
+        - \_typography.scss
+        - \_global.scss
+      - 2_utils/
+        - \_mixins.scss
+      - 3_layout/
+        - \_footer.scss
+        - \_header.scss
+      - 4_modules/
+        - \_buttons.scss
+        - \_forms.scss
+        - \_tags.scss
+        - \_card.scss
+        - \_stage.scss
+      - 5_state/
+        - \_state.scss
 
 - scripts/
   - script.js
