@@ -60,33 +60,34 @@ With a little bit of research, I saw a few other apps out there with a similar i
   - images/
 
 - css/
-  -style.css
+
+  - style.css
 
 - sass/
 
-  - main.scss (Import partials)
+  - main.scss (Import and exports partials)
   - 0_vendors/
   - 1_base/
-    -\_reset.scss
-    -\_colors.scss
-    -\_typography.scss
-    -\_global.scss
+    - \_reset.scss
+    - \_colors.scss
+    - \_typography.scss
+    - \_global.scss
   - 2_utils/
-    -\_mixins.scss
+    - \_mixins.scss
   - 3_layout/
-    -\_footer.scss
-    -\_header.scss
+    - \_footer.scss
+    - \_header.scss
   - 4_module/
-    -\_buttons.scss
-    -\_forms.scss
-    -\_tags.scss
-    -\_card.scss
-    -\_stage.scss
+    - \_buttons.scss
+    - \_forms.scss
+    - \_tags.scss
+    - \_card.scss
+    - \_stage.scss
   - 5_state/
-    -\_state.scss
+    - \_state.scss
 
 - scripts/
-  -script.js
+  - script.js
 
 > Thinking like a Programmer is about having fun with problem-solving
 
