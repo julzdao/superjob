@@ -1,0 +1,10 @@
+@mixin flex($orientation: row, $align: stretch, $justify: stretch) {
+    display: flex;
+    flex-direction: $orientation;
+    align-items: $align;
+    justify-content: $justify;
+  }
+
+  @mixin addTransition($props: all, $duration: 250ms, $timing: ease) {
+    transition: $props $duration $timing;
+  }
