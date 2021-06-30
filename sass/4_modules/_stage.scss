@@ -1,0 +1,17 @@
+@use "../2_utils/mixins" as *;
+@use "../2_utils/functions" as *;
+
+.stage {
+  @include flex(column, center, center);
+  @include addBackground("glass");
+  min-width: 290px;
+  padding: 2em 0.5em;
+  text-align: center;
+
+  &__card-container {
+    width: 100%;
+  }
+  &__stage-count {
+    font-weight: weight(regular);
+  }
+}

@@ -1,15 +1,25 @@
 // 1_base
-@use "./1_base/colors.scss" as *;
-@use "./1_base/typography.scss" as *;
-@use "./1_base/reset.scss" as *;
-@use "./1_base/global.scss" as *;
+@use "./1_base/colors.scss";
+@use "./1_base/typography.scss";
+@use "./1_base/reset.scss";
+@use "./1_base/global.scss";
 
 // 2_utils
-@use  "./2_utils/mixins" as *;
+@use "./2_utils/mixins";
 
 // 3_layout
-@use  "./3_layout/header" as *;
-@use  "./3_layout/footer" as *;
+@use "./3_layout/stage-container";
+@use "./3_layout/main-container";
+@use "./3_layout/header";
+@use "./3_layout/footer";
 
 // 4_modules
 @use "./4_modules/main-logo";
+@use "./4_modules/stage";
+@use "./4_modules/circular-img";
+@use "./4_modules/card";
+@use "./4_modules/tag";
+@use "./4_modules/button";
+
+// 5_states
+@use "./5_states/states";

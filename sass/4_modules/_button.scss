@@ -1,0 +1,18 @@
+@use "../1_base/colors" as *;
+@use "../2_utils/mixins" as *;
+@use "../2_utils/functions" as *;
+
+.button {
+  @include addTransition();
+  background-color: $black_700;
+  color: $white_0;
+  border-radius: 10px;
+  padding: 0 0.5em;
+  margin: 1em 0;
+  font-size: 1.7rem;
+  font-weight: weight(bold);
+}
+
+.button--long {
+  width: 100%;
+}

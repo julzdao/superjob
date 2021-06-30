@@ -1,0 +1,35 @@
+@use "../1_base/colors" as *;
+@use "../2_utils/mixins" as *;
+@use "../2_utils/functions" as *;
+
+.card {
+  @include addBackground("card");
+  @include flex(0, center, space-between);
+  width: 100%;
+  min-height: 70px;
+  background-color: $white_0;
+  border-radius: 10px;
+  padding: 0 1em;
+  margin-bottom: 0.8em;
+
+  &__left-wrapper {
+    @include flex(0, center, center);
+  }
+  .left-wrapper__company-content {
+    @include flex(column, flex-start, flex-start);
+    margin-left: 0.8em;
+  }
+  &__company-title {
+    font-size: 1rem;
+    font-weight: weight(bold);
+  }
+  &__position-title {
+    font-weight: weight(regular);
+    font-size: 0.9rem;
+    color: $gray;
+  }
+  &__right-wrapper {
+    @include flex(column, flex-end, space-between);
+    height: 45px;
+  }
+}
