@@ -1,12 +1,13 @@
 @use "./colors" as *;
-@import url('https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700&display=swap');
+@use "../2_utils/functions" as *;
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700&display=swap");
 
-$font_family: 'Saira', sans-serif;
+$font_family: "Saira", sans-serif;
 $font_size_base: 16px;
 
 :root {
-    font-family: $font_family;
-    font-size: $font_size_base;
-    color: $black_800;
-    font-weight: normal;
+  font-family: $font_family;
+  font-size: $font_size_base;
+  color: $black_800;
+  font-weight: weight(super);
 }
