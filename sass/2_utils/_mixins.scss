@@ -1,10 +1,23 @@
 @mixin flex($orientation: row, $align: stretch, $justify: stretch) {
-    display: flex;
-    flex-direction: $orientation;
-    align-items: $align;
-    justify-content: $justify;
-  }
+  display: flex;
+  flex-direction: $orientation;
+  align-items: $align;
+  justify-content: $justify;
+}
 
-  @mixin addTransition($props: all, $duration: 250ms, $timing: ease) {
-    transition: $props $duration $timing;
+@mixin addTransition($props: all, $duration: 250ms, $timing: ease) {
+  transition: $props $duration $timing;
+}
+
+@mixin addBackground($block: "glass") {
+  @if $block == "glass" {
+    background: radial-gradient(
+      91.21% 191.68% at 4.19% 5.58%,
+      rgba(255, 255, 255, 0.42) 0%,
+      rgba(255, 255, 255, 0.072) 100%
+    );
+    border: 2px solid rgba(255, 255, 255, 0.33);
+    box-sizing: border-box;
+    border-radius: 31px;
   }
+}
