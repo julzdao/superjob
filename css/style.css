@@ -3,7 +3,7 @@
   font-family: "Saira", sans-serif;
   font-size: 16px;
   color: #262627;
-  font-weight: normal;
+  font-weight: 800;
 }
 
 *,
@@ -22,9 +22,51 @@ button {
   background-color: transparent;
 }
 
-:root {
-  font-family: "Saira", sans-serif;
-  font-size: 16px;
-  color: #262627;
+html {
+  background: url("../../assets/images/blur_background.png") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body {
+  color: #39393a;
+  min-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-container {
+  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
+  border: 2px solid rgba(255, 255, 255, 0.33);
+  box-sizing: border-box;
+  border-radius: 31px;
+  width: 95%;
+}
+
+.main-logo {
+  padding: 1em;
+  display: flex;
+  flex-direction: 0;
+  align-items: center;
+  justify-content: center;
+}
+.main-logo .main-logo__icon {
+  width: 60px;
+  margin-right: 1em;
+}
+.main-logo .main-logo__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: 0;
+}
+.main-logo .main-logo__title {
   font-weight: 800;
-} /*# sourceMappingURL=style.css.map */
+  line-height: 0.8;
+  font-size: 2.4rem;
+}
+.main-logo .main-logo__subtitle {
+  font-weight: 200;
+}/*# sourceMappingURL=style.css.map */

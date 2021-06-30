@@ -1,5 +1,19 @@
 @use "../1_base/colors" as *;
+@use "../2_utils/mixins" as *;
+html {
+  background: url("../../assets/images/blur_background.png") no-repeat center
+    center fixed;
+  background-size: cover;
+}
 
 body {
-    color: $black_700;
+  color: $black_700;
+  min-width: 100%;
+  min-height: 100vh;
+  @include flex(0, center, center);
+}
+
+.main-container {
+  @include addBackground("glass");
+  width: 95%;
 }
