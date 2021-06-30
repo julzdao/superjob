@@ -28,15 +28,32 @@
             <div class="stage">
                 <div class="stage__text-wrapper">
                     <h3 class="stage__stage-title">Wish List</h1>
-                    <h4 class="stage__stage-count">x jobs</h1>
+                    <h4 class="stage__stage-count">2 jobs</h1>
                 </div>
                 <button class="button button--long">+</button>
                 <div class="stage__card-container">
                     <div class="card">
-                        <img src="#" alt="Company Image" class="card__company-img">
                         <div class="card__left-wrapper">
-                            <h3 class="card__company-title">Google</h3>
-                            <h3 class="card__position-title">Tech Lead</h3>
+                            <div class="circular-img circular-img--no-img">R</div>
+                            <div class="left-wrapper__company-content">
+                                <h3 class="card__company-title">RPM MKT</h3>
+                                <h3 class="card__position-title">Front End</h3>
+                            </div>
+                        </div>
+                        <div class="card__right-wrapper">
+                            <input type="checkbox" class="supercheck">
+                            <span class="tag">Barcelona</span>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card__left-wrapper">
+                            <div class="circular-img">
+                                <img src="./assets/icons/google.png" alt="" srcset="">
+                            </div>
+                            <div class="left-wrapper__company-content">
+                                <h3 class="card__company-title">Google</h3>
+                                <h3 class="card__position-title">Tech Lead</h3>
+                            </div>
                         </div>
                         <div class="card__right-wrapper">
                             <input type="checkbox" class="supercheck">
@@ -47,7 +64,7 @@
             </div>
         </div>
 
-        <div class="form-container hide">
+        <div class="modal modal--hide">
             <button class="close-button">X</button>
             <form class="form">
                 <label for="company">Company name:</label>

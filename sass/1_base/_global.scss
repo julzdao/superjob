@@ -1,9 +1,12 @@
+@use "../1_base/typography" as *;
 @use "../1_base/colors" as *;
 @use "../2_utils/mixins" as *;
+
 html {
   background: url("../../assets/images/blur_background.png") no-repeat center
     center fixed;
   background-size: cover;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -13,7 +16,7 @@ body {
   @include flex(0, center, center);
 }
 
-.main-container {
-  @include addBackground("glass");
-  width: 95%;
+button {
+  cursor: pointer;
+  font-family: $font_family;
 }

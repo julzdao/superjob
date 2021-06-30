@@ -1,3 +1,5 @@
+@use "../1_base/colors" as *;
+
 @mixin flex($orientation: row, $align: stretch, $justify: stretch) {
   display: flex;
   flex-direction: $orientation;
