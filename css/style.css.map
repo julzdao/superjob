@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"sources":["../sass/partials/1_base/_typography.scss","../sass/partials/1_base/_global.scss","../sass/partials/1_base/_colors.scss","../sass/style.scss","../sass/partials/1_base/_reset.scss"],"names":[],"mappings":"AAEQ,+FAAA;ACAR;EACI,cCFQ;ACEZ;;ACHA;;;EAGI,SAAA;EACA,UAAA;EACA,sBAAA;ADMJ;;ACHA;EACI,UAAA;EACA,SAAA;EACA,YAAA;EACA,aAAA;EACA,6BAAA;ADMJ;;AHZA;EACE,gCAJY;EAKZ,eAJe;EAKf,cEVU;EFWV,gBAAA;AGeF","file":"style.css"}
+=======
+{"version":3,"sources":["../sass/1_base/_typography.scss","../sass/1_base/_colors.scss","../sass/style.scss","../sass/1_base/_reset.scss","../sass/1_base/_global.scss"],"names":[],"mappings":"AACQ,+FAAA;AAKR;EACI,gCAJU;EAKV,eAJa;EAKb,cCTQ;EDUR,mBAAA;AEJJ;;ACNA;;;EAGI,SAAA;EACA,UAAA;EACA,sBAAA;ADSJ;;ACNA;EACI,UAAA;EACA,SAAA;EACA,YAAA;EACA,aAAA;EACA,6BAAA;ADSJ;;AEpBA;EACI,cHFQ;ACyBZ","file":"style.css"}
+>>>>>>> fa22eb9b3f564f2dd31c6d3d7317221010c20ff3

@@ -1,1 +1,12 @@
-@use "./partials/" as *;
+// 1_base
+@use "./1_base/colors.scss" as *;
+@use "./1_base/typography.scss" as *;
+@use "./1_base/reset.scss" as *;
+@use "./1_base/global.scss" as *;
+
+// 2_utils
+@use  "./2_utils/mixins" as *;
+
+// 3_layout
+@use  "./3_layout/header" as *;
+@use  "./3_layout/footer" as *;
