@@ -1,0 +1,10 @@
+$font-weights: (
+  "light": 200,
+  "regular": 400,
+  "super": 800,
+);
+
+// Function to use probably in style.scss or main.scss because of scope
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
