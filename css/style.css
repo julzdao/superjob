@@ -201,6 +201,30 @@ button {
   width: 100%;
 }
 
+input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+}
+
+input[type=checkbox]::before {
+  content: "";
+  display: inline-block;
+  width: 1.3em;
+  height: 1.3em;
+  border: 2px solid #262627;
+  border-radius: 5px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+input[type=checkbox]:checked::before {
+  background-image: url(../../assets/icons/main-logo.svg);
+  background-size: cover;
+}
+
 .modal--hide {
   opacity: 0;
   max-height: 0;
