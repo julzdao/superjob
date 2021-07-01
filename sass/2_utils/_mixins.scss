@@ -11,6 +11,15 @@
   transition: $props $duration $timing;
 }
 
+@mixin addBoxShadow(
+  $color: rgba(0, 0, 0, 0.1),
+  $hOffset: 0px,
+  $vOffset: 10px,
+  $blur: 50px
+) {
+  box-shadow: $color $hOffset $vOffset $blur;
+}
+
 @mixin addBackground($block: "glass") {
   @if $block == "glass" {
     background: radial-gradient(
