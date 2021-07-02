@@ -97,6 +97,7 @@ button {
   min-width: 290px;
   padding: 2em 0.5em;
   text-align: center;
+  margin-top: 1em;
 }
 .stage__card-container {
   width: 100%;
@@ -222,7 +223,8 @@ input[type=checkbox]::before {
 
 input[type=checkbox]:checked::before {
   background-image: url(../../assets/icons/main-logo.svg);
-  background-size: cover;
+  background-size: 1.3em 1.3em;
+  background-position: center;
 }
 
 .modal--hide {
