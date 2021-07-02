@@ -19,5 +19,6 @@ input[type="checkbox"]::before {
 
 input[type="checkbox"]:checked::before {
   background-image: url(../../assets/icons/main-logo.svg);
-  background-size: cover;
+  background-size: 1.3em 1.3em;
+  background-position: center;
 }
