@@ -97,6 +97,7 @@ button {
   min-width: 290px;
   padding: 2em 0.5em;
   text-align: center;
+  margin-top: 1em;
 }
 .stage__card-container {
   width: 100%;
