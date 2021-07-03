@@ -43,6 +43,15 @@ button {
   font-family: "Saira", sans-serif;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .stage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
 .main-container {
   background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
   border: 2px solid rgba(255, 255, 255, 0.33);
@@ -216,9 +225,6 @@ input[type=checkbox]::before {
   height: 1.3em;
   border: 2px solid #262627;
   border-radius: 5px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 input[type=checkbox]:checked::before {
