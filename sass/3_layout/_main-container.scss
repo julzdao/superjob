@@ -1,10 +1,16 @@
 @use "../2_utils/mixins" as *;
+@use "../6_queries/queries" as *;
 
 .main-container {
-    @include addBackground("glass");
-    @include flex(column, center, 0);
-    padding: 2em 1em;
-    width: 90%;
-    min-width: 340px;
-    min-height: 90vh;
+  @include addBackground("glass");
+  @include flex(column, center, 0);
+  padding: 2em 1em;
+  width: 90%;
+  min-width: 340px;
+  min-height: 90vh;
+
+  @include tablet {
+    overflow-x: scroll;
+    @include flex(0, flex-start, 0);
   }
+}

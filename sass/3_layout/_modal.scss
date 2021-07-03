@@ -1,0 +1,16 @@
+@use "../2_utils/mixins" as *;
+
+.modal {
+    @include flex(0, center, center);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal--hide {
+    opacity: 0;
+    max-height: 0;
+}

@@ -43,6 +43,15 @@ button {
   font-family: "Saira", sans-serif;
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  .stage-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+}
+
 .main-container {
   background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
   border: 2px solid rgba(255, 255, 255, 0.33);
@@ -56,6 +65,38 @@ button {
   width: 90%;
   min-width: 340px;
   min-height: 90vh;
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-container {
+    overflow-x: scroll;
+    display: flex;
+    flex-direction: 0;
+    align-items: flex-start;
+    justify-content: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  header {
+    align-self: center;
+  }
+}
+.modal {
+  display: flex;
+  flex-direction: 0;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal--hide {
+  opacity: 0;
+  max-height: 0;
 }
 
 .main-logo {
@@ -84,6 +125,12 @@ button {
   font-weight: 200;
   font-size: 1.25rem;
 }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .main-logo {
+    width: unset;
+    min-width: unset;
+  }
+}
 
 .stage {
   display: flex;
@@ -98,6 +145,7 @@ button {
   padding: 2em 0.5em;
   margin-bottom: 1em;
   text-align: center;
+  margin-top: 1em;
 }
 .stage__card-container {
   width: 100%;
@@ -216,17 +264,10 @@ input[type=checkbox]::before {
   height: 1.3em;
   border: 2px solid #262627;
   border-radius: 5px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
 }
 
 input[type=checkbox]:checked::before {
   background-image: url(../../assets/icons/main-logo.svg);
-  background-size: cover;
-}
-
-.modal--hide {
-  opacity: 0;
-  max-height: 0;
+  background-size: 1.3em 1.3em;
+  background-position: center;
 }/*# sourceMappingURL=style.css.map */

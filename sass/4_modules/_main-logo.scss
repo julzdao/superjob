@@ -1,6 +1,7 @@
 @use "../1_base/colors" as *;
 @use "../2_utils/mixins" as *;
 @use "../2_utils/functions" as *;
+@use "../6_queries/queries" as *;
 
 .main-logo {
     padding: 1em;
@@ -21,5 +22,10 @@
     .main-logo__subtitle {
         font-weight: weight(light);
         font-size: 1.25rem; 
+    }
+
+    @include tablet {
+        width: unset;
+        min-width: unset;
     }
 }

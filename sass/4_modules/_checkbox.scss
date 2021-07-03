@@ -14,10 +14,10 @@ input[type="checkbox"]::before {
   height: 1.3em;
   border: 2px solid $black_800;
   border-radius: 5px;
-  appearance: none;
 }
 
 input[type="checkbox"]:checked::before {
   background-image: url(../../assets/icons/main-logo.svg);
-  background-size: cover;
+  background-size: 1.3em 1.3em;
+  background-position: center;
 }

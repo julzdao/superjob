@@ -12,6 +12,7 @@
 @use "./3_layout/main-container";
 @use "./3_layout/header";
 @use "./3_layout/footer";
+@use "./3_layout/modal";
 
 // 4_modules
 @use "./4_modules/main-logo";
@@ -21,6 +22,10 @@
 @use "./4_modules/tag";
 @use "./4_modules/button";
 @use "./4_modules/checkbox";
+@use "./4_modules/forms";
 
 // 5_states
 @use "./5_states/states";
+
+// 6_queries
+@use "./6_queries/queries";
