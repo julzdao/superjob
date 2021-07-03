@@ -1,0 +1,7 @@
+@use "../6_queries/queries" as *;
+
+@include tablet {
+    header {
+        align-self: center;
+    }
+}
