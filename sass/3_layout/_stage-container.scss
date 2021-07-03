@@ -1,0 +1,8 @@
+@use "../2_utils/mixins" as *;
+@use "../6_queries/queries" as *;
+
+.stage-container {
+    @include tablet {
+        @include flex(row, flex-start, space-around);
+    }
+}
