@@ -96,6 +96,7 @@ button {
   border-radius: 31px;
   min-width: 290px;
   padding: 2em 0.5em;
+  margin-bottom: 1em;
   text-align: center;
 }
 .stage__card-container {
