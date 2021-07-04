@@ -1,10 +1,12 @@
 @use "../2_utils/mixins" as *;
 @use "../2_utils/functions" as *;
+@use "../6_queries/queries" as *;
 
 .stage {
   @include flex(column, center, center);
   @include addBackground("glass");
-  min-width: 290px;
+  min-width: 315px;
+  max-height: 95%;
   padding: 2em 0.5em;
   margin-bottom: 1em;
   text-align: center;
@@ -12,8 +14,20 @@
 
   &__card-container {
     width: 100%;
+    padding: .5em;
   }
   &__stage-count {
     font-weight: weight(regular);
+  }
+
+  @include tablet {
+    margin-right: 1.5em;
+    &:last-child {
+      margin-right: unset;
+    }
+    &__card-container {
+      max-height: 100%;
+      overflow-y: auto;
+    }
   }
 }

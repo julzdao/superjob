@@ -43,12 +43,14 @@ button {
   font-family: "Saira", sans-serif;
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .stage-container {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: 0;
+    overflow-x: scroll;
+    width: 100%;
   }
 }
 
@@ -66,17 +68,17 @@ button {
   min-width: 340px;
   min-height: 90vh;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .main-container {
-    overflow-x: scroll;
     display: flex;
     flex-direction: 0;
     align-items: flex-start;
     justify-content: 0;
+    height: 90vh;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   header {
     align-self: center;
   }
@@ -125,7 +127,7 @@ button {
   font-weight: 200;
   font-size: 1.25rem;
 }
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (min-width: 768px) {
   .main-logo {
     width: unset;
     min-width: unset;
@@ -141,7 +143,8 @@ button {
   border: 2px solid rgba(255, 255, 255, 0.33);
   box-sizing: border-box;
   border-radius: 31px;
-  min-width: 290px;
+  min-width: 315px;
+  max-height: 95%;
   padding: 2em 0.5em;
   margin-bottom: 1em;
   text-align: center;
@@ -149,9 +152,22 @@ button {
 }
 .stage__card-container {
   width: 100%;
+  padding: 0.5em;
 }
 .stage__stage-count {
   font-weight: 300;
+}
+@media (min-width: 768px) {
+  .stage {
+    margin-right: 1.5em;
+  }
+  .stage:last-child {
+    margin-right: unset;
+  }
+  .stage__card-container {
+    max-height: 100%;
+    overflow-y: auto;
+  }
 }
 
 .circular-img {
