@@ -3,6 +3,8 @@
 
 .stage-container {
     @include tablet {
-        @include flex(row, flex-start, space-around);
+        @include flex(row, flex-start, 0);
+        overflow-x: scroll;
+        width: 100%;
     }
 }

@@ -10,7 +10,7 @@
   min-height: 90vh;
 
   @include tablet {
-    overflow-x: scroll;
     @include flex(0, flex-start, 0);
+    height: 90vh;
   }
 }
