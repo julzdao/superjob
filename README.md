@@ -65,9 +65,9 @@ With a little bit of research, I saw a few other apps out there with a similar i
 
 - sass/
 
-  - main.scss (Communicates with the pipe (_index.scss))
-    - partials/ 
-      - _index.scss (Acts as a pipe which communicates all templates)
+  - main.scss (Communicates with the pipe (\_index.scss))
+    - partials/
+      - \_index.scss (Acts as a pipe which communicates all templates)
       - 0_vendors/
       - 1_base/
         - \_reset.scss
@@ -95,28 +95,41 @@ With a little bit of research, I saw a few other apps out there with a similar i
 
 ### Understand the problem
 
-- How are we going to create new job applications?
-  - Using the object-oriented exercise we did with the book store
 - Where are we going to store all of the applications?
   - In an array
+- How are we going to process with local storage?
+
+  - After finishing the main workflow, research into Firebase
+
 - What are we going to put inside the constructor?
-  - Business Name
-  - Position
-  - Location
-  - Salary
-  - Superjob checkbox
-- How are we going to get the values from the form?
-  - Using the id's from each element on the form
-  - When poping each form and pressing submit -> Those values create a new Application
-- How are we going to add each new application with the second function?
-  - Add an event listener outside for the form submit -> Assign those values
-  - With the second function -> Create new Application and push that into the array
-- How to submit the values?
-  - Add an event listener for submit inside the second function
+
+  - Business Name (string)
+  - Position (string)
+  - Location (string)
+  - Superjob checkbox (boolean)
+  - Stage (string)
+  - link (string)
+
+- When clicking Submit, how to get the values from the form?
+
+  - Research different methods for getting values
+
+- How to identify every card?
+
+  - We could do it with an Id or Data-Attribute
+  - Get the first three letters of Company-Position-Location
+  - Add a new number
+
+- How to know in which stage the user adds a new card?
+
+  - Using data-attributes
+
+- How to organize classes in js?
+
+  - card class stage class
+
 - How to add each application to the display?
   - Create a for loop and add all of the array items with appendchild to the container div
-- How to remove an element from the list?
-  - By giving each one a data-attribute and find the index of that element on the array list
 - How to toggle between superwork or not?
   - By creating a function that toggles between both stages
 - How to store data?
