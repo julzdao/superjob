@@ -1,0 +1,26 @@
+@use "../2_utils/mixins" as *;
+@use "../6_queries/queries" as *;
+
+.form-container {
+  @include addBackground("glass");
+  @include flex(column, center, space-around);
+  @include addBoxShadow();
+  width: 90%;
+  height: 60%;
+
+  .button--long {
+    width: 80%;
+    height: 2.3em;
+    font-size: 1.3em;
+  }
+
+  .close-button {
+    align-self: flex-end;
+    margin-right: 1.5em;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
