@@ -175,6 +175,8 @@ This is the first solution I came up with before any code was written. Even thou
 
 - [How to get values from an HTML form](https://stackoverflow.com/questions/3547035/javascript-getting-html-form-values)
 - [How to get the checked value from a checkbox](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/)
+- [How to get Y position from a div](https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window)
+- [Get Bounding Client Rect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
 
 ## Approaches
 
