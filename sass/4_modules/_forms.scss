@@ -1,3 +1,4 @@
+@use "../1_base/colors" as *;
 @use "../2_utils/mixins" as *;
 @use "../2_utils/functions" as *;
 @use "../6_queries/queries" as *;
@@ -5,7 +6,7 @@
 
 .form {
   @include flex(column, center, space-around);
-  width: 80%;
+  width: 85%;
   height: 45%;
 
   &__checkbox-container {
@@ -26,14 +27,13 @@
     outline: none;
     border: 2px solid rgba(38, 38, 39, 0.05);
     border-radius: 8px;
-    font-weight: weight(light);
+    font-weight: weight(regular);
     &:focus {
       outline: none;
     }
-
     &::placeholder {
-      color: #9d9d9d;
-      font-weight: weight(superlight);
+      color: $black_700;
+      font-weight: weight(regular);
     }
   }
 }
