@@ -7,6 +7,10 @@
   @include addBoxShadow();
   width: 90%;
   height: 60%;
+  min-width: 330px;
+  min-height: 450px;
+  max-width: 550px;
+  max-height: 450px;
 
   .button--long {
     width: 80%;
@@ -17,6 +21,7 @@
   .close-button {
     align-self: flex-end;
     margin-right: 1.5em;
+    font-size: 1.15rem;
     opacity: 0.4;
 
     &:hover {

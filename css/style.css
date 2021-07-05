@@ -93,9 +93,13 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
   width: 90%;
   height: 60%;
+  min-width: 330px;
+  min-height: 450px;
+  max-width: 550px;
+  max-height: 450px;
 }
 .form-container .button--long {
   width: 80%;
@@ -105,6 +109,7 @@ button {
 .form-container .close-button {
   align-self: flex-end;
   margin-right: 1.5em;
+  font-size: 1.15rem;
   opacity: 0.4;
 }
 .form-container .close-button:hover {
@@ -126,8 +131,7 @@ button {
   height: 100%;
   top: 0px;
   left: 0px;
-  background-color: rgba(0, 0, 0, 0.5);
-  background: url(../../assets/images/blur_background.png);
+  background: url(../../assets/images/blur_background.png), rgba(0, 0, 0, 0.9);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -308,6 +312,7 @@ input[type=checkbox] {
      -moz-appearance: none;
           appearance: none;
   outline: none;
+  cursor: pointer;
 }
 
 input[type=checkbox]::before {
@@ -330,7 +335,7 @@ input[type=checkbox]:checked::before {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  width: 80%;
+  width: 85%;
   height: 45%;
 }
 .form__checkbox-container {
@@ -358,20 +363,20 @@ input[type=checkbox]:checked::before {
   outline: none;
   border: 2px solid rgba(38, 38, 39, 0.05);
   border-radius: 8px;
-  font-weight: 200;
+  font-weight: 300;
 }
 .form input[type=text]:focus {
   outline: none;
 }
 .form input[type=text]::-moz-placeholder {
-  color: #9d9d9d;
-  font-weight: 100;
+  color: #39393a;
+  font-weight: 300;
 }
 .form input[type=text]:-ms-input-placeholder {
-  color: #9d9d9d;
-  font-weight: 100;
+  color: #39393a;
+  font-weight: 300;
 }
 .form input[type=text]::placeholder {
-  color: #9d9d9d;
-  font-weight: 100;
+  color: #39393a;
+  font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
