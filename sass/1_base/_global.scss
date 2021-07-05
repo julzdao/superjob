@@ -1,6 +1,18 @@
 @use "../1_base/typography" as *;
 @use "../1_base/colors" as *;
 @use "../2_utils/mixins" as *;
+@use "../6_queries/queries" as *;
+
+:root {
+  font-family: $font_family;
+  font-size: $font_size_base;
+  color: $black_800;
+  font-weight: weight(super);
+
+  @include desktop {
+    font-size: 14px;
+  }
+}
 
 html {
   background: url("../../assets/images/blur_background.png") no-repeat center

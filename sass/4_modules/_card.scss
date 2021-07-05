@@ -16,6 +16,7 @@
 
   &:hover {
     @include addBoxShadow();
+    transform: scale(1.03);
   }
 
   &--supercard {
