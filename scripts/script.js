@@ -1,5 +1,4 @@
 const cards = document.querySelectorAll(".card");
-const stages = document.querySelectorAll(".stage__card-container");
 
 let draggedCard;
 
@@ -69,51 +68,18 @@ document.addEventListener(
       event.target.style.background = "";
       draggedCard.parentNode.removeChild(draggedCard);
       event.target.appendChild(draggedCard);
-    } else if (
-      event.target.parentNode.className == "card" ||
-      event.target.parentNode.className == "stage__card-container"
-    ) {
-      event.target.style.background = "";
-      draggedCard.parentNode.removeChild(draggedCard);
-      event.target.parentNode.appendChild(draggedCard);
+    }
+    const stages = [...document.querySelectorAll(".stage__card-container")];
+    console.log(stages);
+    for (let i = 0; i < stages.length; i++) {
+      const stage = stages[i];
+
+      if (stage.contains(event.target)) {
+        stage.style.background = "";
+        draggedCard.parentNode.removeChild(draggedCard);
+        stage.appendChild(draggedCard);
+      }
     }
   },
   false
 );
-// for (let i = 0; i < cards.length; i++) {
-//   const card = cards[i];
-
-//   card.addEventListener("dragstart", function () {
-//     draggedCard = card;
-
-//     setTimeout(function () {
-//       card.style.display = "none";
-//     }, 0);
-//   });
-
-//   card.addEventListener("dragend", function () {
-//     setTimeout(function () {
-//       draggedCard.style.display = "flex";
-//       draggedCard = null;
-//     }, 0);
-//   });
-
-//   for (let j = 0; j < stages.length; j++) {
-//     const stage = stages[j];
-
-//     stage.addEventListener("dragover", function (e) {
-//       e.preventDefault;
-//       stage.style.backgroundColor = "pink";
-//     });
-
-//     stage.addEventListener("dragenter", function (e) {
-//       e.preventDefault;
-//     });
-
-//     stage.addEventListener("drop", function (e) {
-//       stage.append(draggedCard);
-
-//       console.log(e.target);
-//     });
-//   }
-// }
