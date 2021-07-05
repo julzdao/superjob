@@ -27,12 +27,14 @@
     outline: none;
     border: 2px solid rgba(38, 38, 39, 0.05);
     border-radius: 8px;
-    font-weight: weight(regular);
+    font-weight: weight(medium);
+    color: $black_800;
     &:focus {
       outline: none;
     }
     &::placeholder {
       color: $black_700;
+      opacity: 0.6;
       font-weight: weight(regular);
     }
   }

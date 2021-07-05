@@ -13,3 +13,7 @@ button {
     outline: none;
     background-color: transparent;
 }
+
+input[type="text"]::placeholder {
+    opacity: 1;
+}

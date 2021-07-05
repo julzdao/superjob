@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap");
 *,
 *::before,
 *::after {
@@ -13,6 +13,18 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+}
+
+input[type=text]::-moz-placeholder {
+  opacity: 1;
+}
+
+input[type=text]:-ms-input-placeholder {
+  opacity: 1;
+}
+
+input[type=text]::placeholder {
+  opacity: 1;
 }
 
 :root {
@@ -363,20 +375,24 @@ input[type=checkbox]:checked::before {
   outline: none;
   border: 2px solid rgba(38, 38, 39, 0.05);
   border-radius: 8px;
-  font-weight: 300;
+  font-weight: 400;
+  color: #262627;
 }
 .form input[type=text]:focus {
   outline: none;
 }
 .form input[type=text]::-moz-placeholder {
   color: #39393a;
+  opacity: 0.6;
   font-weight: 300;
 }
 .form input[type=text]:-ms-input-placeholder {
   color: #39393a;
+  opacity: 0.6;
   font-weight: 300;
 }
 .form input[type=text]::placeholder {
   color: #39393a;
+  opacity: 0.6;
   font-weight: 300;
 }/*# sourceMappingURL=style.css.map */
