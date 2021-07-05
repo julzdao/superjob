@@ -171,19 +171,23 @@
             </div>
         </div>
 
-        <div class="modal modal--hide">
-            <button class="close-button">X</button>
-            <form class="form">
-                <label for="company">Company name:</label>
-                <input type="text" class="form__company" name="company" />
-                <label for="position">Position:</label>
-                <input type="text" class="form__position" name="position" />
-                <label for="location">Location:</label>
-                <input type="text" class="form__location" name="location" />
-                <label for="super">SuperJob:</label>
-                <input type="checkbox" class="supercheck" name="super" />
-              </form>
-              <button type="submit" class="button button--long">Submit</button>
+        <div class="modal">
+            <div class="form-container">
+                <button class="close-button">X</button>
+                <h1>Add new Superjob</h3>
+                <form class="form">
+                    <input type="text" class="form__company" name="company" placeholder="Company Name"/>
+                    <input type="text" class="form__position" name="position" placeholder="Position"/>
+                    <input type="text" class="form__location" name="location" placeholder="Location" />
+                    <div class="form__checkbox-container">
+                        <label for="super">SuperJob:</label>
+                        <input type="checkbox" class="supercheck" name="super"/>
+                    </div>
+                    
+                </form>
+                <button type="submit" class="button button--long">Submit</button>
+            </div>
+            
         </div>
     </main>
 </body>
