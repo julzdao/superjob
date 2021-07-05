@@ -144,6 +144,7 @@ button {
   top: 0px;
   left: 0px;
   background: url(../../assets/images/blur_background.png), rgba(0, 0, 0, 0.9);
+  background-size: cover;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
