@@ -1,12 +1,8 @@
 @use "./colors" as *;
 @use "../2_utils/functions" as *;
 @use "../6_queries/queries" as *;
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;600;700&display=swap");
 
 $font_family: "Saira", sans-serif;
 $font_size_base: 16px;
 $font_size_base_desktop: 14px;
-
-
-
-
