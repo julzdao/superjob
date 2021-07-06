@@ -1,0 +1,17 @@
+@use "../1_base/colors" as *;
+@use "../2_utils/mixins" as *;
+@use "../2_utils/functions" as *;
+
+.trash {
+  width: 1.1em;
+  height: 1.1em;
+  margin-left: 0.2em;
+  img {
+    width: 100%;
+    opacity: 0.4;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

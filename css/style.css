@@ -293,6 +293,12 @@ button {
   justify-content: space-between;
   height: 45px;
 }
+.card__trash-and-tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: 0;
+}
 
 .tag {
   font-size: 0.625rem;
@@ -398,4 +404,17 @@ input[type=checkbox]:checked::before {
   color: #39393a;
   opacity: 0.6;
   font-weight: 300;
+}
+
+.trash {
+  width: 1.1em;
+  height: 1.1em;
+  margin-left: 0.2em;
+}
+.trash img {
+  width: 100%;
+  opacity: 0.4;
+}
+.trash img:hover {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */
