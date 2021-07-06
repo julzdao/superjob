@@ -44,4 +44,8 @@
     @include flex(column, flex-end, space-between);
     height: 45px;
   }
+
+  &__trash-and-tag {
+    @include flex(row, center, 0);
+  }
 }
