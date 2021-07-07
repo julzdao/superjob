@@ -49,48 +49,6 @@ With a little bit of research, I saw a few other apps out there with a similar i
 
 ## My Process
 
-### Stable Architecture
-
-- README.md
-- index.html
-
-- assets/
-
-  - icons/
-  - images/
-
-- css/
-
-  - style.css
-
-- sass/
-
-  - main.scss (Communicates with the pipe (\_index.scss))
-    - partials/
-      - \_index.scss (Acts as a pipe which communicates all templates)
-      - 0_vendors/
-      - 1_base/
-        - \_reset.scss
-        - \_colors.scss
-        - \_typography.scss
-        - \_global.scss
-      - 2_utils/
-        - \_mixins.scss
-      - 3_layout/
-        - \_footer.scss
-        - \_header.scss
-      - 4_modules/
-        - \_buttons.scss
-        - \_forms.scss
-        - \_tags.scss
-        - \_card.scss
-        - \_stage.scss
-      - 5_state/
-        - \_state.scss
-
-- scripts/
-  - script.js
-
 > Thinking like a Programmer is about having fun with problem-solving
 
 ### Understand the problem
@@ -135,6 +93,19 @@ With a little bit of research, I saw a few other apps out there with a similar i
 - How to store data?
   - Use Firebase so we can store all the data online, so when we log every time, the same job applications keep being there.
 
+### ES6 Modules Javascript
+
+index.html
+main.js
+modules/
+card.js // Create a new card and add Expanded features like remove or edit
+library.js // Everything related with storing the cards on each stage and adding them
+api.js // Storing the api for the company logo feature
+dragdrop.js // Add the event listeners for the drag and drop feature
+superjob.js // Whenever the user clicks on the superjob checkbox, it adds a new class
+form.js // All the necessary code related to form inputs and placeholders
+info.js // Modal with information about the app
+
 ### Pseudocode
 
 After reading the first chapter of the book "Think like a programmer", I wanted to put in practice that philosophy of "Always have a plan". For this purpose, I spend a few hours researching and thinking about the best way to implement each feature in plain english.
@@ -177,6 +148,7 @@ This is the first solution I came up with before any code was written. Even thou
 - [How to get the checked value from a checkbox](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/)
 - [How to get Y position from a div](https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window)
 - [Get Bounding Client Rect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
+- [Git Repo as a Module ES6 Example](https://github.com/mdn/js-examples/tree/master/modules)
 
 ## Approaches
 
