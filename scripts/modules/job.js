@@ -6,8 +6,9 @@ class Job {
     this.superjob = superjob;
   }
 
-  testClass() {
-    return `Hello ${this.company} ${this.position} ${this.location} ${this.superjob}`;
+  isSuperJob(bool) {
+    if (typeof bool !== "boolean") return;
+    return this.superjob = bool;
   }
 }
 
