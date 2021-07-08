@@ -26,8 +26,8 @@
     color: $white_0;
 
     .tag {
-      background-color: $white_0;
-      color: $black_800;
+      background-color: rgba(255, 255, 255, 0.205);
+      color: $white_0;
     }
 
     input[type="checkbox"]::before {
