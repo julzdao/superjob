@@ -32,6 +32,7 @@ export default function createCard(
 
   const checkbox = document.createElement("INPUT");
   checkbox.setAttribute("type", "checkbox");
+  checkbox.setAttribute("name", "supercheck");
   if (superjob === true) {
     checkbox.checked = "true";
     card.classList.add("card--supercard");
