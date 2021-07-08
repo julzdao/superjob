@@ -34,6 +34,7 @@ export default function createCard(
   checkbox.setAttribute("type", "checkbox");
   if (superjob === true) {
     checkbox.checked = "true";
+    card.classList.add("card--supercard");
   }
   checkbox.classList.add("supercheck");
 
