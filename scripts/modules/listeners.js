@@ -1,5 +1,5 @@
 const toggleSuper = () => {
-  const superchecks = document.querySelectorAll(".supercheck");
+  const superchecks = document.querySelectorAll("input[name=supercheck]");
 
   superchecks.forEach((check) => {
     check.addEventListener("change", function () {
