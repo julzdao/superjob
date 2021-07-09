@@ -1,75 +1,60 @@
-export default function createCard(
-  { company, position, location, superjob },
-  stage
-) {
+const CreateCard = ({ company, position, location, superjob }, stage) => {
   const selection = document.querySelector(`[data-stage='${stage}']`);
-
   const card = document.createElement("div");
-  card.classList.add("card");
-  card.setAttribute("draggable", "true");
-
   const leftWrapper = document.createElement("div");
-  leftWrapper.classList.add("card__left-wrapper");
-
   const circularImg = document.createElement("div");
-  circularImg.classList.add("circular-img", "circular-img--no-img");
-  circularImg.textContent = company[0];
-
   const companyContentWrapper = document.createElement("div");
-  companyContentWrapper.classList.add("left-wrapper__company-content");
-
   const companyTitle = document.createElement("div");
-  companyTitle.classList.add("card__company-title");
-  companyContentWrapper.textContent = company;
-
   const positionTitle = document.createElement("div");
-  positionTitle.classList.add("card__position-title");
-  positionTitle.textContent = position;
-
   const rightWrapper = document.createElement("div");
-  rightWrapper.classList.add("card__right-wrapper");
-
   const checkbox = document.createElement("INPUT");
-  checkbox.setAttribute("type", "checkbox");
-  checkbox.setAttribute("name", "supercheck");
-  if (superjob === true) {
-    checkbox.checked = "true";
-    card.classList.add("card--supercard");
-  }
-  checkbox.classList.add("supercheck");
-
   const tag = document.createElement("span");
-  tag.classList.add("tag");
-  tag.textContent = location;
 
-  selection.append(card);
-  card.append(leftWrapper, rightWrapper);
-  leftWrapper.append(circularImg, companyContentWrapper);
-  companyContentWrapper.append(companyTitle, positionTitle);
-  rightWrapper.append(checkbox, tag);
-}
+  const addClasses = () => {
+    card.classList.add("card");
+    card.setAttribute("draggable", "true");
+    leftWrapper.classList.add("card__left-wrapper");
+    circularImg.classList.add("circular-img", "circular-img--no-img");
+    companyContentWrapper.classList.add("left-wrapper__company-content");
+    companyTitle.classList.add("card__company-title");
+    positionTitle.classList.add("card__position-title");
+    rightWrapper.classList.add("card__right-wrapper");
+    tag.classList.add("tag");
+    checkbox.classList.add("supercheck");
+    checkbox.setAttribute("type", "checkbox");
+    checkbox.setAttribute("name", "supercheck");
+  };
 
-/* const Card = () => { 
-      const card = document.create.
+  const addContent = () => {
+    circularImg.textContent = company[0];
+    companyContentWrapper.textContent = company;
+    positionTitle.textContent = position;
+    tag.textContent = location;
+  };
 
-      const createCard ((
-  { company, position, location, superjob },
-  stage
-) ) {
+  const checkSuperjob = () => {
+    if (superjob === true) {
+      checkbox.checked = "true";
+      card.classList.add("card--supercard");
+    }
+  };
 
-}
-      
-      const addClasses {
-        // classess
-      }
+  const appendCard = () => {
+    selection.append(card);
+    card.append(leftWrapper, rightWrapper);
+    leftWrapper.append(circularImg, companyContentWrapper);
+    companyContentWrapper.append(companyTitle, positionTitle);
+    rightWrapper.append(checkbox, tag);
+  };
 
-      const addContent {
-        // text content...
-      }
+  const create = () => {
+    addClasses();
+    addContent();
+    checkSuperjob();
+    appendCard();
+  };
 
-      const appendCard  {
+  return { create };
+};
 
-      }
-}
-
-*/
+export { CreateCard };
