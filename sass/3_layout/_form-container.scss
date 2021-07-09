@@ -2,9 +2,11 @@
 @use "../6_queries/queries" as *;
 
 .form-container {
-  @include addBackground("glass");
+  // @include addBackground("glass");
   @include flex(column, center, space-around);
   @include addBoxShadow();
+  background-color: rgba(240, 240, 240, 0.938);
+  border-radius: 20px;
   width: 90%;
   height: 60%;
   min-width: 330px;

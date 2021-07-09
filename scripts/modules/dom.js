@@ -2,7 +2,6 @@ export default function createCard(
   { company, position, location, superjob },
   stage
 ) {
-  console.log(company, position, location, superjob);
   const selection = document.querySelector(`[data-stage='${stage}']`);
 
   const card = document.createElement("div");
@@ -49,3 +48,28 @@ export default function createCard(
   companyContentWrapper.append(companyTitle, positionTitle);
   rightWrapper.append(checkbox, tag);
 }
+
+/* const Card = () => { 
+      const card = document.create.
+
+      const createCard ((
+  { company, position, location, superjob },
+  stage
+) ) {
+
+}
+      
+      const addClasses {
+        // classess
+      }
+
+      const addContent {
+        // text content...
+      }
+
+      const appendCard  {
+
+      }
+}
+
+*/

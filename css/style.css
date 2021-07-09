@@ -97,15 +97,13 @@ button {
 }
 
 .form-container {
-  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 31px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   box-shadow: rgba(0, 0, 0, 0.055) 0px 10px 10px;
+  background-color: rgba(240, 240, 240, 0.938);
+  border-radius: 20px;
   width: 90%;
   height: 60%;
   min-width: 330px;
@@ -145,8 +143,6 @@ button {
   left: 0px;
   background: url(../../assets/images/gradient-modal.png), rgba(0, 0, 0, 0.315);
   background-size: cover;
-  -webkit-backdrop-filter: blur(6px);
-          backdrop-filter: blur(6px);
 }
 
 .modal--hide {

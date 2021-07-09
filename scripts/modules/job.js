@@ -8,7 +8,7 @@ class Job {
 
   isSuperJob(bool) {
     if (typeof bool !== "boolean") return;
-    return this.superjob = bool;
+    return (this.superjob = bool);
   }
 }
 
