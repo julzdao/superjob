@@ -1,14 +1,28 @@
-import { Job } from "./modules/job.js";
+import Job from "./modules/job.js";
+import UI from "./modules/ui.js";
 import { Modals } from "./modules/modals.js";
 import { toggleSuper } from "./modules/listeners.js";
-import { CreateCard } from "./modules/dom.js";
 import dragger from "./modules/dragger.js";
 
-const newJob = new Job("Starbucks", "Tech Lead", "SanFran", true);
+document.addEventListener("DOMContentLoaded", (e) => {
+  UI.displayJobs();
+  dragger();
+  Modals.openModal();
+  Modals.closeModal();
+  toggleSuper();
+});
 
-CreateCard(newJob, "wish-list").create()
+document.querySelector(".form").addEventListener("submit", (e) => {
+  e.preventDefault();
+  const company = document.querySelector("#company").value;
+  const position = document.querySelector("#position").value;
+  const location = document.querySelector("#location").value;
+  const isSuperJob = document.querySelector("#super").checked;
+  const stage = Modals.getCurrentStage();
 
-dragger();
-Modals.showModal();
-Modals.closeModal();
-toggleSuper();
+  const job = new Job(company, position, location, isSuperJob, stage);
+
+  UI.addJobToStage(job);
+  UI.clearInputs();
+  toggleSuper();
+});

@@ -1,15 +1,9 @@
-class Job {
-  constructor(company, position, location, superjob) {
+export default class Job {
+  constructor(company, position, location, superjob, stage) {
     this.company = company;
     this.position = position;
     this.location = location;
     this.superjob = superjob;
-  }
-
-  isSuperJob(bool) {
-    if (typeof bool !== "boolean") return;
-    return (this.superjob = bool);
+    this.stage = stage || "wish-list";
   }
 }
-
-export { Job };
