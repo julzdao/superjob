@@ -22,6 +22,14 @@ export default class UI {
     jobs.forEach((job) => UI.addJobToStage(job));
   }
 
+  static checkSuperjob(checked) {
+    if (checked) {
+      return "checked";
+    } else {
+      return "";
+    }
+  }
+
   static addJobToStage(job) {
     //Select the stage to add the job
     const stage = document.querySelector(`[data-stage="${job.stage}"]`);
@@ -29,6 +37,9 @@ export default class UI {
     //Create card element with Job data
     const card = document.createElement("div");
     card.classList.add("card");
+    if (job.superjob) {
+      card.classList.add("card--supercard");
+    }
     card.setAttribute("draggable", "true");
     card.innerHTML = `
     <div class="card__left-wrapper">
@@ -39,7 +50,9 @@ export default class UI {
       </div>
     </div>
     <div class="card__right-wrapper">
-      <input type="checkbox" class="supercheck" name="supercheck" checked="${job.superjob}">
+      <input type="checkbox" class="supercheck" name="supercheck" ${UI.checkSuperjob(
+        job.superjob
+      )}>
       <span class="tag">${job.location}</span>                        
     </div> 
     `;

@@ -19,10 +19,13 @@ document.querySelector(".form").addEventListener("submit", (e) => {
   const location = document.querySelector("#location").value;
   const isSuperJob = document.querySelector("#super").checked;
   const stage = Modals.getCurrentStage();
+  console.log(isSuperJob);
 
   const job = new Job(company, position, location, isSuperJob, stage);
 
+  Modals.validateForm();
   UI.addJobToStage(job);
   UI.clearInputs();
-  toggleSuper();
+
+  // toggleSuper();
 });
