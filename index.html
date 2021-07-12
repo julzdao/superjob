@@ -176,16 +176,22 @@
                 <button class="close-button">X</button>
                 <h1>Add new Superjob</h3>
                 <form class="form">
-                    <input type="text" class="form__company" name="company" placeholder="Company Name"/>
-                    <input type="text" class="form__position" name="position" placeholder="Position"/>
-                    <input type="text" class="form__location" name="location" placeholder="Location" />
+                    <label for="company"></label>
+                    <input id="company" type="text" class="form__company" name="company" placeholder="Company Name"/>
+
+                    <label for="position"></label>
+                    <input id="position" type="text" class="form__position" name="position" placeholder="Position"/>
+
+                    <label for="location"></label>
+                    <input id="location" type="text" class="form__location" name="location" placeholder="Location" />
+
                     <div class="form__checkbox-container">
                         <label for="super">SuperJob:</label>
-                        <input type="checkbox" class="supercheck" name="super"/>
+                        <input id="super" type="checkbox" class="supercheck" name="super"/>
                     </div>
                     
+                    <button type="submit" class="button button--long">Submit</button>
                 </form>
-                <button type="submit" class="button button--long">Submit</button>
             </div>
             
         </div>
