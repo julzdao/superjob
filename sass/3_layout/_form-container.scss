@@ -6,28 +6,52 @@
   @include flex(column, center, space-around);
   @include addBoxShadow();
   background-color: rgba(240, 240, 240, 0.938);
-  border-radius: 20px;
+  border-radius: 25px;
   width: 90%;
-  height: 60%;
-  min-width: 330px;
+  height: 68%;
+  min-width: 220px;
   min-height: 450px;
-  max-width: 550px;
+  max-width: 380px;
   max-height: 450px;
 
+  h1 {
+    font-size: 1.5em;
+  }
+
   .button--long {
-    width: 80%;
+    width: 90%;
     height: 2.3em;
-    font-size: 1.3em;
+    font-size: 1.18em;
   }
 
   .close-button {
     align-self: flex-end;
-    margin-right: 1.5em;
+    margin-right: 1.2em;
+    margin-top: 0.4em;
     font-size: 1.15rem;
-    opacity: 0.4;
+    opacity: 0.3;
 
     &:hover {
-      opacity: 1;
+      opacity: 0.8;
+    }
+  }
+
+  @include tablet {
+    max-width: 450px;
+  }
+
+  @include desktop {
+    h1 {
+      font-size: 1.8em;
+      margin-top: -0.6em;
+    }
+
+    .button--long {
+      font-size: 1.3em;
+    }
+
+    .close-button {
+      margin-top: -0.5em;
     }
   }
 }

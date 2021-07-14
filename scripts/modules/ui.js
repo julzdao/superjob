@@ -70,5 +70,15 @@ export default class UI {
     document.querySelector("#position").value = "";
     document.querySelector("#location").value = "";
     document.querySelectorAll("#super").checked = false;
+
+    document
+      .querySelector("#company")
+      .classList.remove("form__wrong", "form__right");
+    document
+      .querySelector("#position")
+      .classList.remove("form__wrong", "form__right");
+    document
+      .querySelector("#location")
+      .classList.remove("form__wrong", "form__right");
   }
 }
