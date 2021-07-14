@@ -2,9 +2,10 @@ const Modals = (() => {
   const modal = document.querySelector(".modal");
   const addJobButtons = document.querySelectorAll("[data-button]");
   let currentStage = "wish-list";
-  const companyInput = document.querySelector("#company");
-  const positionInput = document.querySelector("#position");
-  const locationInput = document.querySelector("#location");
+  const companyForm = document.querySelector("#company");
+  const positionForm = document.querySelector("#position");
+  const locationForm = document.querySelector("#location");
+  const textInput = document.querySelectorAll(".form__input");
 
   // Add event listener from + button
   const openModal = () => {
@@ -25,8 +26,23 @@ const Modals = (() => {
   };
 
   const validateForm = () => {
-    modal.classList.add("modal--hide");
+    let rightInputs = [];
     // Input validation form here
+    textInput.forEach((input) => {
+      if (input.value === "") {
+        input.classList.add("form__wrong");
+        return false;
+      } else {
+        input.classList.add("form__right");
+        rightInputs.push(input);
+      }
+      console.log(rightInputs);
+    });
+
+    if (rightInputs.length === 3) {
+      modal.classList.add("modal--hide");
+      return true;
+    }
   };
 
   const getCurrentStage = () => currentStage;

@@ -6,8 +6,9 @@
 
 .form {
   @include flex(column, center, space-around);
-  width: 85%;
-  height: 45%;
+  width: 75%;
+  height: 18em;
+  margin-bottom: 1.5em;
 
   &__checkbox-container {
     @include flex(row, center, space-between);
@@ -17,7 +18,7 @@
     width: 7em;
   }
 
-  input[type="text"] {
+  &__input {
     @include flex(row, center, space-between);
     width: 90%;
     height: 3.3em;
@@ -37,5 +38,16 @@
       opacity: 0.6;
       font-weight: weight(regular);
     }
+  }
+
+  &__wrong {
+    border: 3px solid rgba(218, 68, 68, 0.678);
+  }
+  &__right {
+    border: 3px solid rgba(71, 175, 44, 0.678);
+  }
+
+  @include desktop {
+    height: 19em;
   }
 }
