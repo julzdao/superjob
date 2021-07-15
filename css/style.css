@@ -256,14 +256,9 @@ button {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 0.7px solid rgba(0, 0, 0, 0.25);
-  color: #5f25bb;
-  font-size: 1.3rem;
-  font-weight: 500;
-}
-
-.circular-img--no-img {
-  background-color: #cbb4f0;
+  color: #262627;
+  font-size: 2.2rem;
+  font-weight: 700;
 }
 
 .card {
@@ -298,6 +293,9 @@ button {
 }
 .card--supercard:hover {
   background-color: #262627;
+}
+.card--supercard .circular-img {
+  color: white;
 }
 .card__left-wrapper {
   display: flex;
@@ -428,25 +426,25 @@ input[type=checkbox]:checked::before {
   outline: none;
 }
 .form__input::-moz-placeholder {
-  color: #39393a;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.479);
+  opacity: 0.1;
   font-weight: 300;
 }
 .form__input:-ms-input-placeholder {
-  color: #39393a;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.479);
+  opacity: 0.1;
   font-weight: 300;
 }
 .form__input::placeholder {
-  color: #39393a;
-  opacity: 0.6;
+  color: rgba(0, 0, 0, 0.479);
+  opacity: 0.1;
   font-weight: 300;
 }
 .form__wrong {
-  border: 3px solid rgba(218, 68, 68, 0.678);
+  border: 3px solid rgba(218, 68, 68, 0.603);
 }
 .form__right {
-  border: 3px solid rgba(71, 175, 44, 0.678);
+  border: 3px solid rgba(70, 175, 44, 0.609);
 }
 @media (min-width: 1024px) {
   .form {

@@ -34,17 +34,17 @@
       outline: none;
     }
     &::placeholder {
-      color: $black_700;
-      opacity: 0.6;
+      color: rgba(0, 0, 0, 0.479);
+      opacity: 0.1;
       font-weight: weight(regular);
     }
   }
 
   &__wrong {
-    border: 3px solid rgba(218, 68, 68, 0.678);
+    border: 3px solid rgba(218, 68, 68, 0.603);
   }
   &__right {
-    border: 3px solid rgba(71, 175, 44, 0.678);
+    border: 3px solid rgba(70, 175, 44, 0.609);
   }
 
   @include desktop {
