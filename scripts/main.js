@@ -6,6 +6,7 @@ import dragger from "./modules/dragger.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
   UI.displayJobs();
+  UI.logoError();
   dragger();
   Modals.openModal();
   Modals.closeModal();
