@@ -1,6 +1,6 @@
-# Job Board - The Odin Project
+# Superjob - The Odin Project
 
-<!-- ![Frame 1portadagithub](assets/images/portada.png) -->
+![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/125776757-b41cb3d5-bb40-4dc3-ba26-b7324808565b.png) 
 
 Go to the [Live Preview](#);
 
@@ -121,14 +121,6 @@ Create a function that toggles the superjob status when onClick()
 
 Obviously, after coding for a while, I had to re-arrange blocks and come up with solutions for a few other problems. Overall, it really helped me with speeding up the workflow.
 
-### Mindmap
-
-After finishing up the pseudocode method, I thought that some parts were a bit confusing to digest for my current level. That's why I tried to express each solution and function into a simple mindmap. This way I could visualize all the co-relations between variables and organize all of the ideas.
-
-This is the first solution I came up with before any code was written. Even though it was a good start and helped me a lot in visualizing the funcion callings, I had to re-arrange lots of thinks in order to work it out.
-
-![Mindmap](#)
-
 ### Useful Sources
 
 - [How to get values from an HTML form](https://stackoverflow.com/questions/3547035/javascript-getting-html-form-values)
@@ -147,9 +139,4 @@ This is the first solution I came up with before any code was written. Even thou
 
 ## Attribution
 
-## Contact
-
-[<img alt="Instagram" src="https://img.shields.io/badge/shifujulen%20-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white"/>](https://www.instagram.com/shifujulen/)
-[<img alt="LinkedIn" src="https://img.shields.io/badge/linkedin%20-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white"/>](https://www.linkedin.com/in/julenfront/)
-[<img alt="Youtube" src="https://img.shields.io/badge/shifujulen%20-%23FF0000.svg?&style=for-the-badge&logo=YouTube&logoColor=white"/>](https://www.youtube.com/channel/UCUoloquxVnnNLFTD8RwthIQ)
-[<img alt="Twitter" src="https://img.shields.io/badge/@shifujulen%20-%231DA1F2.svg?&style=for-the-badge&logo=Twitter&logoColor=white"/>](https://twitter.com/shifujulen)
+- Made with love by Nicolás Ríos & Julen Diaz
