@@ -1,17 +1,31 @@
 const Modals = (() => {
   const modal = document.querySelector(".modal");
   const addJobButtons = document.querySelectorAll("[data-button]");
-  let currentStage = "wish-list";
-  const companyForm = document.querySelector("#company");
-  const positionForm = document.querySelector("#position");
-  const locationForm = document.querySelector("#location");
   const textInput = document.querySelectorAll(".form__input");
+  let currentStage = "wish-list";
 
-  // Add event listener from + button
+  const blockScrolling = (bool) => {
+    const body = document.querySelector("body");
+    const cardContainers = document.querySelectorAll(".stage__card-container");
+
+    if (bool) {
+      body.classList.add("scroll-blocked");
+      cardContainers.forEach((container) =>
+        container.classList.add("scroll-blocked")
+      );
+    } else {
+      body.classList.remove("scroll-blocked");
+      cardContainers.forEach((container) =>
+        container.classList.remove("scroll-blocked")
+      );
+    }
+  };
+
   const openModal = () => {
     addJobButtons.forEach((button) => {
       button.addEventListener("click", () => {
         modal.classList.remove("modal--hide");
+        blockScrolling(true);
         currentStage = button.dataset.button;
       });
     });
@@ -21,7 +35,10 @@ const Modals = (() => {
     modal.addEventListener("click", (e) => {
       let isModal = e.target.classList.contains("modal");
       let isCloseBtn = e.target.classList.contains("close-button");
-      if (isModal || isCloseBtn) modal.classList.add("modal--hide");
+      if (isModal || isCloseBtn) {
+        modal.classList.add("modal--hide");
+        blockScrolling(false);
+      }
     });
   };
 
