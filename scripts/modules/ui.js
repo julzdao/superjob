@@ -69,7 +69,7 @@ export default class UI {
     document.querySelector("#company").value = "";
     document.querySelector("#position").value = "";
     document.querySelector("#location").value = "";
-    document.querySelectorAll("#super").checked = false;
+    document.querySelector("#super").checked = false;
 
     document
       .querySelector("#company")
