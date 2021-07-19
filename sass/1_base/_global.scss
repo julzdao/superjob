@@ -8,10 +8,6 @@
   font-size: $font_size_base;
   color: $black_800;
   font-weight: weight(super);
-
-  @include desktop {
-    font-size: 14px;
-  }
 }
 
 html {
