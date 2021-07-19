@@ -1,5 +1,4 @@
 export default class UI {
-
   static displayJobs() {
     //Get data from local storage
     const jobs = [
@@ -46,7 +45,9 @@ export default class UI {
     card.innerHTML = `
     <div class="card__left-wrapper">
       <div class="circular-img">
-        <img src="https://logo.clearbit.com/${job.company}.com" id="circular-${job.company}">
+        <img src="https://logo.clearbit.com/${job.company}.com" id="circular-${
+      job.company
+    }" class="company-logo">
       </div>
       <div class="left-wrapper__company-content">
           <h3 class="card__company-title">${job.company}</h3>
@@ -63,27 +64,6 @@ export default class UI {
 
     //Append card as the first child of the stage
     stage.insertAdjacentElement("afterbegin", card);
-  }
-
-  static logoError() {
-    const circularImgs = document.querySelectorAll(".circular-img");
-
-    circularImgs.forEach((img) => {
-      img.addEventListener("error", (e) => {
-        console.log(e);
-    //      let currentCard = document.getElementById(`${id}`);
-    // // Math the circular-img div in order to add the company first letter
-    //      for (let i = 0; i < currentCard.childNodes.length; i++) {
-    //         if (currentCard.childNodes[i].className == "circular-img") {
-    //           currentCard.childNodes[i].classList.add("circular-img--no-img");
-    //           currentCard.childNodes[i].removeChild(currentCard.childNodes[0]);
-    //           currentCard.childNodes[i].textContent = `${currentCard.company[0]}`;
-    //           break;
-    //         }        
-    //       }
-      })
-    })
-    
   }
 
   static deleteJob() {}

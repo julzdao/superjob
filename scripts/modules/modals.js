@@ -1,27 +1,45 @@
 const Modals = (() => {
   const modal = document.querySelector(".modal");
   const addJobButtons = document.querySelectorAll("[data-button]");
-  let currentStage = "wish-list";
-  const companyForm = document.querySelector("#company");
-  const positionForm = document.querySelector("#position");
-  const locationForm = document.querySelector("#location");
   const textInput = document.querySelectorAll(".form__input");
 
-  // Add event listener from + button
-  const openModal = () => {
+  let currentStage = "wish-list";
+
+  const blockScrolling = (bool) => {
+    const body = document.querySelector("body");
+    const cardContainers = document.querySelectorAll(".stage__card-container");
+
+    if (bool) {
+      body.classList.add("scroll-blocked");
+      cardContainers.forEach((container) =>
+        container.classList.add("scroll-blocked")
+      );
+    } else {
+      body.classList.remove("scroll-blocked");
+      cardContainers.forEach((container) =>
+        container.classList.remove("scroll-blocked")
+      );
+    }
+  };
+
+  const openModalListener = () => {
     addJobButtons.forEach((button) => {
       button.addEventListener("click", () => {
         modal.classList.remove("modal--hide");
+        blockScrolling(true);
         currentStage = button.dataset.button;
       });
     });
   };
 
-  const closeModal = () => {
+  const closeModalListener = () => {
     modal.addEventListener("click", (e) => {
       let isModal = e.target.classList.contains("modal");
       let isCloseBtn = e.target.classList.contains("close-button");
-      if (isModal || isCloseBtn) modal.classList.add("modal--hide");
+      if (isModal || isCloseBtn) {
+        modal.classList.add("modal--hide");
+        blockScrolling(false);
+      }
     });
   };
 
@@ -36,20 +54,23 @@ const Modals = (() => {
         input.classList.add("form__right");
         rightInputs.push(input);
       }
-      console.log(rightInputs);
     });
 
     if (rightInputs.length === 3) {
       modal.classList.add("modal--hide");
+      blockScrolling(false);
       return true;
     }
   };
 
   const getCurrentStage = () => currentStage;
 
-  return { openModal, closeModal, getCurrentStage, validateForm };
+  return {
+    openModalListener,
+    closeModalListener,
+    getCurrentStage,
+    validateForm,
+  };
 })();
-
-// Check for Success or Fail
 
 export { Modals };
