@@ -33,11 +33,6 @@ input[type=text]::placeholder {
   color: #262627;
   font-weight: weight(super);
 }
-@media (min-width: 1024px) {
-  :root {
-    font-size: 14px;
-  }
-}
 
 html {
   background: url("../../assets/images/gradient2.png") no-repeat center center fixed;
@@ -140,13 +135,9 @@ button {
 @media (min-width: 1024px) {
   .form-container h1 {
     font-size: 1.8em;
-    margin-top: -0.6em;
   }
   .form-container .button--long {
     font-size: 1.3em;
-  }
-  .form-container .close-button {
-    margin-top: -0.5em;
   }
 }
 
@@ -483,11 +474,6 @@ input[type=checkbox]:checked::before {
   width: 100%;
   min-height: 2.1em;
   font-size: 1.18em;
-}
-@media (min-width: 1024px) {
-  .form {
-    height: 19em;
-  }
 }
 
 .trash {
