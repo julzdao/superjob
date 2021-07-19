@@ -2,6 +2,7 @@ const Modals = (() => {
   const modal = document.querySelector(".modal");
   const addJobButtons = document.querySelectorAll("[data-button]");
   const textInput = document.querySelectorAll(".form__input");
+
   let currentStage = "wish-list";
 
   const blockScrolling = (bool) => {
@@ -21,7 +22,7 @@ const Modals = (() => {
     }
   };
 
-  const openModal = () => {
+  const openModalListener = () => {
     addJobButtons.forEach((button) => {
       button.addEventListener("click", () => {
         modal.classList.remove("modal--hide");
@@ -31,7 +32,7 @@ const Modals = (() => {
     });
   };
 
-  const closeModal = () => {
+  const closeModalListener = () => {
     modal.addEventListener("click", (e) => {
       let isModal = e.target.classList.contains("modal");
       let isCloseBtn = e.target.classList.contains("close-button");
@@ -53,20 +54,23 @@ const Modals = (() => {
         input.classList.add("form__right");
         rightInputs.push(input);
       }
-      console.log(rightInputs);
     });
 
     if (rightInputs.length === 3) {
       modal.classList.add("modal--hide");
+      blockScrolling(false);
       return true;
     }
   };
 
   const getCurrentStage = () => currentStage;
 
-  return { openModal, closeModal, getCurrentStage, validateForm };
+  return {
+    openModalListener,
+    closeModalListener,
+    getCurrentStage,
+    validateForm,
+  };
 })();
-
-// Check for Success or Fail
 
 export { Modals };
