@@ -9,10 +9,10 @@
   left: 0px;
   background: url(../../assets/images/gradient-modal.png), rgba(0, 0, 0, 0.315);
   background-size: cover;
-  // backdrop-filter: blur(6px);
 }
 
 .modal--hide {
   opacity: 0;
   max-height: 0;
+  display: none;
 }

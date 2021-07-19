@@ -174,20 +174,39 @@
         <div class="modal modal--hide">
             <div class="form-container">
                 <button class="close-button">X</button>
-                <h1>Add new Superjob</h3>
+                <header class="form-container__header">
+                    <h1>Add new Job</h1>
+                </header>
                 <form class="form">
-                    <label for="company"></label>
-                    <input id="company" type="text" class="form__input" name="company" placeholder="Company Name"/>
-
-                    <label for="position"></label>
-                    <input id="position" type="text" class="form__input" name="position" placeholder="Position"/>
-
-                    <label for="location"></label>
-                    <input id="location" type="text" class="form__input" name="location" placeholder="Location" />
-
-                    <div class="form__checkbox-container">
-                        <label for="super">SuperJob:</label>
-                        <input id="super" type="checkbox" class="supercheck" name="super"/>
+                    <div class="input-container">
+                        <div class="form__control">
+                            <label class="form__label" for="company">Company</label>
+                            <div class="input-wrapper">
+                                <input id="company" type="text" class="form__input" name="company" placeholder="Company Name"/>
+                                <img class="form__input-icon" src="./assets/icons/icon_company.svg" alt="company">
+                            </div>
+                        </div>
+    
+                        <div class="form__control">
+                            <label class="form__label" for="position">Position</label>
+                            <div class="input-wrapper">
+                                <input id="position" type="text" class="form__input" name="position" placeholder="Position"/>
+                                <img src="./assets/icons/icon_position.svg" alt="position" class="form__input-icon">
+                            </div>
+                        </div>
+    
+                        <div class="form__control">
+                            <label class="form__label" for="location">Location</label>
+                            <div class="input-wrapper">
+                                <input id="location" type="text" class="form__input" name="location" placeholder="Location" />
+                                <img src="./assets/icons/icon_location.svg" alt="position" class="form__input-icon">
+                            </div>
+                        </div>
+    
+                        <div class="form__checkbox-container">
+                            <label class="form__label" for="super">Is SuperJob? </label>
+                            <input id="super" type="checkbox" class="supercheck" name="super"/>
+                        </div>
                     </div>
                     
                     <button type="submit" class="button button--long">Submit</button>
