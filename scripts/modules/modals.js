@@ -2,6 +2,7 @@ const Modals = (() => {
   const modal = document.querySelector(".modal");
   const addJobButtons = document.querySelectorAll("[data-button]");
   const textInput = document.querySelectorAll(".form__input");
+  const fieldRequired = document.createElement("p");
 
   let currentStage = "wish-list";
 
@@ -45,10 +46,21 @@ const Modals = (() => {
 
   const validateForm = () => {
     let rightInputs = [];
+    let goodbyeValidation;
     // Input validation form here
     textInput.forEach((input) => {
+      let currentControl = input.parentElement.parentElement;
       if (input.value === "") {
         input.classList.add("form__wrong");
+        input.classList.remove("form__right");
+        // Add field Required validation text
+        fieldRequired.textContent = "This field is required";
+        fieldRequired.classList.add("form__required");
+        currentControl.appendChild(fieldRequired);
+        // Set the timeout for fadeout effect
+        goodbyeValidation = setTimeout(function () {
+          currentControl.removeChild(currentControl.lastChild);
+        }, 3000);
         return false;
       } else {
         input.classList.add("form__right");
