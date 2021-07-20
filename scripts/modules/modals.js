@@ -61,10 +61,7 @@ const Modals = (() => {
         goodbyeValidation = setTimeout(function () {
           currentControl.removeChild(currentControl.lastChild);
         }, 3000);
-        console.log(currentControl.contains(fieldRequired));
         return false;
-        // } else if (currentControl.contains(fieldRequired) && input.value > 0) {
-        //   currentControl.removeChild(currentControl.lastChild);
       } else {
         input.classList.add("form__right");
         rightInputs.push(input);
