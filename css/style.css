@@ -420,6 +420,45 @@ input[type=checkbox]:checked::before {
 .form__control {
   width: 100%;
   height: 5.3em;
+  position: relative;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.form__required {
+  color: rgba(218, 68, 68, 0.603);
+  position: absolute;
+  font-size: 0.8em;
+  font-weight: 500;
+  top: 4px;
+  right: 5px;
+  -webkit-animation: fadeOut 3s;
+          animation: fadeOut 3s;
 }
 .form .input-wrapper {
   position: relative;
