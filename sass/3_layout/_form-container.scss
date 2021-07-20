@@ -9,12 +9,21 @@
   width: 90%;
   min-width: 220px;
   max-width: 380px;
+  min-height: 500px;
   max-height: 600px;
   position: relative;
-  padding: 2em 0 .5em;
+  padding: 3.1em 0 0.5em;
 
   h1 {
     font-size: 1.5em;
+  }
+
+  &__logo {
+    @include addBoxShadow(rgba(0, 0, 0, 0.109));
+    border-radius: 10px;
+    position: absolute;
+    top: -20px;
+    left: 220px/2;
   }
 
   &__header {
