@@ -63,42 +63,33 @@ export default function dragger() {
     function (event) {
       // prevent default action (open as link for some elements)
       event.preventDefault();
-      console.log(event.pageY);
-      // console.log(stages[0]);
-      // console.log(
-      //   window.scrollY +
-      //     document.querySelector("#try-card").getBoundingClientRect().top +
-      //     35
-      // );
-      // move dragged elem to the selected drop target
-      if (event.target.className == "stage__card-container") {
-        event.target.style.background = "";
-        draggedCard.parentNode.removeChild(draggedCard);
-        event.target.appendChild(draggedCard);
-      }
+      // Get the current stage in which the drop event happens
+      let currentStage;
 
-      for (let i = 0; i < stages.length; i++) {
-        const stage = stages[i];
-
-        if (stage.contains(event.target)) {
-          stage.style.background = "";
-          draggedCard.parentNode.removeChild(draggedCard);
-          stage.appendChild(draggedCard);
+      for (let i = 0; i < event.path.length; i++) {
+        if (event.path[i].className === "stage__card-container") {
+          currentStage = event.path[i];
         }
       }
+      // Get the Y position from the center of each card in that stage
+      let positionYCards = [];
+      for (let i = 0; i < currentStage.children.length; i++) {
+        positionYCards.push(
+          window.scrollY +
+            currentStage.children[i].getBoundingClientRect().top +
+            35
+        );
+      }
+      // Get the drop event index inside all the Y positions within the stage cards
+      positionYCards.push(event.pageY);
+      positionYCards.sort();
+      let dropIndex = positionYCards.indexOf(event.pageY);
+
+      // Insert card just after the index position from the card before
+      event.target.style.background = "";
+      draggedCard.parentNode.removeChild(draggedCard);
+      currentStage.insertBefore(draggedCard, currentStage.children[dropIndex]);
     },
     false
   );
 }
-
-// How to get the card in the position that we want
-// Check to see if the drop is in between two cards
-// How to know which cards are we talking about?
-// Calculate the distance between the top of the previous card and the bottom of the next card
-// How to get the dropEvent Y -> event.pageY
-// How to get the center of a div position Y _> window.scrollY + document.querySelector('#elementId').getBoundingClientRect().top + card.height/2
-// If the drop event Y is in between this distance
-// Get the position in the array of both cards
-//
-// Append the card just in the position
-// Check to see if there is only one card but it needs to be first

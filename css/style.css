@@ -451,7 +451,7 @@ input[type=checkbox]:checked::before {
   }
 }
 .form__required {
-  color: rgba(218, 68, 68, 0.603);
+  color: rgba(184, 37, 37, 0.767);
   position: absolute;
   font-size: 0.8em;
   font-weight: 500;
