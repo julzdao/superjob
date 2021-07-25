@@ -1,24 +1,5 @@
 export default class UI {
-  static displayJobs() {
-    //Get data from local storage
-    const jobs = [
-      {
-        company: "Blizzard",
-        position: "Tech Lead",
-        location: "San Francisco",
-        superjob: true,
-        stage: "wish-list",
-      },
-      {
-        company: "Ubisoft",
-        position: "Game Developer",
-        location: "San Francisco",
-        superjob: false,
-        stage: "wish-list",
-      },
-    ];
-
-    //Add jobs to stage
+  static displayJobs(jobs) {
     jobs.forEach((job) => UI.addJobToStage(job));
   }
 
@@ -37,7 +18,7 @@ export default class UI {
     //Create card element with Job data
     const card = document.createElement("div");
     card.classList.add("card");
-    card.id = `${job.company}`;
+    // card.id = `${job.company}`;
     if (job.superjob) {
       card.classList.add("card--supercard");
     }
@@ -74,6 +55,7 @@ export default class UI {
     document.querySelector("#company").value = "";
     document.querySelector("#position").value = "";
     document.querySelector("#location").value = "";
+    document.querySelector("#link").value = "";
     document.querySelector("#super").checked = false;
 
     document
@@ -84,6 +66,9 @@ export default class UI {
       .classList.remove("form__wrong", "form__right");
     document
       .querySelector("#location")
+      .classList.remove("form__wrong", "form__right");
+    document
+      .querySelector("#link")
       .classList.remove("form__wrong", "form__right");
   }
 }

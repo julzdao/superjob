@@ -68,7 +68,7 @@ const Modals = (() => {
       }
     });
 
-    if (rightInputs.length === 3) {
+    if (rightInputs.length === 4) {
       modal.classList.add("modal--hide");
       blockScrolling(false);
       return true;
