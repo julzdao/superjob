@@ -8,6 +8,7 @@ import dragger from "./modules/dragger.js";
 document.addEventListener("DOMContentLoaded", (e) => {
   //Fetch jobs from the localStorage and display them
   UI.displayJobs(Storage.getJobs());
+  listenErrorImg();
   dragger();
   Modals.openModalListener();
   Modals.closeModalListener();
@@ -21,9 +22,10 @@ document.querySelector(".form").addEventListener("submit", (e) => {
   const location = document.querySelector("#location").value;
   const offerLink = document.querySelector("#link").value;
   const isSuperJob = document.querySelector("#super").checked;
+  const date = new Date;
   const stage = Modals.getCurrentStage();
   if (Modals.validateForm()) {
-    const job = new Job(company, position, location, offerLink, isSuperJob, stage);
+    const job = new Job(company, position, location, offerLink, isSuperJob, stage, date);
     //Save job into the localStorage
     Storage.saveJob(job);
     UI.addJobToStage(job);
