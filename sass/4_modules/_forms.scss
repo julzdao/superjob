@@ -45,6 +45,17 @@
     }
   }
 
+  &__error {
+    color: rgba(184, 37, 37, 0.767);
+    font-size: 0.8em;
+    font-weight: weight(bold);
+    position: absolute;
+    right: 0.3em;
+    top: 4px;
+    opacity: 0.9;
+    visibility: hidden;
+  }
+
   &__required {
     color: rgba(184, 37, 37, 0.767);
     position: absolute;
