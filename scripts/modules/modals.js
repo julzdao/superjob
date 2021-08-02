@@ -62,6 +62,7 @@ const Modals = (() => {
     })
 
     let rightInputs = [];
+    console.log(rightInputs);
 
     if (companyValue === "") {
       setErrorFor(companyInput, "Company cannot be blanked");
@@ -122,7 +123,7 @@ const Modals = (() => {
 
   const setSuccessFor = (input) => {
     input.classList.add("form__right");
-    input.classList.remove("form__wrong")
+    input.classList.remove("form__wrong");
   }
 
   const getCurrentStage = () => currentStage;
