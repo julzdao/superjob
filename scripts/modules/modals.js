@@ -63,22 +63,26 @@ const Modals = (() => {
 
     let rightInputs = [];
 
-     
-
     if (companyValue === "") {
       setErrorFor(companyInput, "Company cannot be blanked");
+    } else if (companyValue.length > 14) {
+      setErrorFor(companyInput, "Company must be less than 14 letters")
     } else {
       setSuccessFor(companyInput);
     };
 
     if (positionValue === "") {
       setErrorFor(positionInput, "Position cannot be blanked");
+    } else if (positionValue.length > 14) {
+      setErrorFor(positionInput, "Position must be less than 14 letters")
     } else {
       setSuccessFor(positionInput);
     }
 
     if (locationValue === "") {
       setErrorFor(locationInput, "Location cannot be blanked");
+    } else if (locationValue.length > 10) {
+      setErrorFor(locationInput, "Location must be less than 10 letters")
     } else {
       setSuccessFor(locationInput);
     }
@@ -113,7 +117,7 @@ const Modals = (() => {
     errorText.style.visibility = "visible";
 
     input.classList.add("form__wrong");
-    input.classList.remove("form__right")
+    input.classList.remove("form__right");
   }
 
   const setSuccessFor = (input) => {
