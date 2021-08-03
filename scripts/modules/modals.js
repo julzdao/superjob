@@ -1,14 +1,12 @@
 const Modals = (() => {
   const modal = document.querySelector(".modal");
-  const form = document.querySelector(".form");
   const companyInput = document.querySelector("#company");
   const positionInput = document.querySelector("#position");
   const locationInput = document.querySelector("#location");
   const linkInput = document.querySelector("#link");
   const addJobButtons = document.querySelectorAll("[data-button]");
-  const textInput = [...document.querySelectorAll(".form__input")];
+  const allInputs = [...document.querySelectorAll(".form__input")];
   const allErrors = document.querySelectorAll(".form__error");
-  const fieldRequired = document.createElement("p");
 
   let currentStage = "wish-list";
 
@@ -61,8 +59,7 @@ const Modals = (() => {
       error.style.visibility = "hidden";
     })
 
-    let rightInputs = [];
-    console.log(rightInputs);
+    let successInputs = [];
 
     if (companyValue === "") {
       setErrorFor(companyInput, "Company cannot be blanked");
@@ -95,14 +92,14 @@ const Modals = (() => {
     }
 
     // Check if all inputs are with form__right
-    for (let i = 0; i < textInput.length; i++) {
-      if(textInput[i].classList.contains("form__right")) {
-        rightInputs.push(textInput[i]);
+    for (let i = 0; i < allInputs.length; i++) {
+      if(allInputs[i].classList.contains("form__right")) {
+        successInputs.push(allInputs[i]);
       }
     }
     
     // Submit the form only when all inputs are correctly filled
-    if (rightInputs.length === 4) {
+    if (successInputs.length === 4) {
       modal.classList.add("modal--hide");
       blockScrolling(false);
       return true;
