@@ -28,7 +28,7 @@ export default class UI {
       <div class="circular-img">
         <img src="https://logo.clearbit.com/${job.company}.com" id="circular-${
       job.company
-    }" class="company-logo">
+    }" class="company-logo" draggable="false">
       </div>
       <div class="left-wrapper__company-content">
           <h3 class="card__company-title">${job.company}</h3>
