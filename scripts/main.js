@@ -2,17 +2,23 @@ import Job from "./modules/job.js";
 import UI from "./modules/ui.js";
 import Storage from "./modules/localStorage.js";
 import { Modals } from "./modules/modals.js";
-import { toggleSuper, listenErrorImg } from "./modules/listeners.js";
+import { Listeners } from "./modules/listeners.js";
 import dragger from "./modules/dragger.js";
 
 document.addEventListener("DOMContentLoaded", (e) => {
   //Fetch jobs from the localStorage and display them
   UI.displayJobs(Storage.getJobs());
-  listenErrorImg();
+  
+  //Initialize Dragger
   dragger();
+
+  //Initialize Modals
   Modals.openModalListener();
   Modals.closeModalListener();
-  toggleSuper();
+
+  //Initialize Listeners
+  Listeners.listenErrorImg()
+  Listeners.listenSupercheck();
 });
 
 document.querySelector(".form").addEventListener("submit", (e) => {
@@ -24,6 +30,7 @@ document.querySelector(".form").addEventListener("submit", (e) => {
   const isSuperJob = document.querySelector("#super").checked;
   const date = new Date();
   const stage = Modals.getCurrentStage();
+
   if (Modals.validateForm()) {
     const job = new Job(
       company,
@@ -34,11 +41,12 @@ document.querySelector(".form").addEventListener("submit", (e) => {
       stage,
       date
     );
+    
     //Save job into the localStorage
     Storage.saveJob(job);
     UI.addJobToStage(job);
     UI.clearInputs();
-    toggleSuper();
-    listenErrorImg();
+    Listeners.listenSupercheck();
+    Listeners.listenErrorImg()
   }
 });

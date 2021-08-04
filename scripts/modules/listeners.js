@@ -1,36 +1,43 @@
-const toggleSuper = () => {
-  const superchecks = document.querySelectorAll("input[name=supercheck]");
+const Listeners = (() => {
+  
+  const listenSupercheck = () => {
+    const checkboxes = document.querySelectorAll("input[name=supercheck]");
+    checkboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        const card = checkbox.parentElement.parentElement;
 
-  superchecks.forEach((check) => {
-    check.addEventListener("change", function () {
-      if (this.checked) {
-        this.parentElement.parentElement.classList.add("card--supercard");
-      } else {
-        this.parentElement.parentElement.classList.remove("card--supercard");
-      }
+        //If the checkbox is checked, add supercard class otherwise remove it.
+        checkbox.checked
+          ? card.classList.add("card--supercard")
+          : card.classList.remove("card--supercard");
+      });
     });
-  });
-};
+  };
 
-const listenErrorImg = () => {
-  //Select all cards
-  const cards = document.querySelectorAll(".card");
+  const listenErrorImg = () => {
+    //Select all cards
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      //Within each card, select the company name and company img
+      const companyImg = card.querySelector(".company-logo");
+      const circularDiv = card.querySelector(".circular-img");
+      const company = card.querySelector(".card__company-title").textContent;
 
-  cards.forEach((card) => {
-    //Within each card, select the company name and company img
-    const companyImg = card.querySelector(".company-logo");
-    const circularDiv = card.querySelector(".circular-img");
-    const company = card.querySelector(".card__company-title").textContent;
+      if (companyImg === null) return;
 
-    if (companyImg === null) return;
-
-    //For each company img, if there is an error, display first letter of company as it logo.
-    companyImg.addEventListener("error", () => {
-      circularDiv.classList.add(".circular-img--no-img");
-      circularDiv.textContent = company[0].toUpperCase();
-      companyImg.remove();
+      //For each company img, if there is an error, display first letter of company as it logo.
+      companyImg.addEventListener("error", () => {
+        circularDiv.classList.add(".circular-img--no-img");
+        circularDiv.textContent = company[0].toUpperCase();
+        companyImg.remove();
+      });
     });
-  });
-};
+  };
 
-export { toggleSuper, listenErrorImg };
+  return {
+    listenSupercheck,
+    listenErrorImg,
+  };
+})();
+
+export { Listeners };
