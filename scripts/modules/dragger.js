@@ -1,5 +1,4 @@
 export default function dragger() {
-
   let draggedCard;
 
   document.addEventListener(
@@ -32,7 +31,6 @@ export default function dragger() {
     false
   );
 
-
   document.addEventListener(
     "drop",
     function (event) {
@@ -41,7 +39,10 @@ export default function dragger() {
       // Get the current stage in which the drop event happens
       let currentStage;
       // Get the event path in Chrome and Firefox
-      const path = event.path || (event.composedPath && event.composedPath()) || composedPath(event.target);
+      const path =
+        event.path ||
+        (event.composedPath && event.composedPath()) ||
+        composedPath(event.target);
 
       // make sure that the drop.path is inside the stage card container and assign it
       for (let i = 0; i < path.length; i++) {

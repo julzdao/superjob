@@ -288,6 +288,10 @@ button {
   transform: scale(1.008);
   background-color: #ffffff;
 }
+.card--dragging {
+  opacity: 0.5;
+  transform: rotate(-2deg);
+}
 .card--supercard {
   background-color: #39393a;
   color: #ffffff;

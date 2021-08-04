@@ -51,24 +51,4 @@ export default class UI {
 
   static showAlert() {}
 
-  static clearInputs() {
-    document.querySelector("#company").value = "";
-    document.querySelector("#position").value = "";
-    document.querySelector("#location").value = "";
-    document.querySelector("#link").value = "";
-    document.querySelector("#super").checked = false;
-
-    document
-      .querySelector("#company")
-      .classList.remove("form__wrong", "form__right");
-    document
-      .querySelector("#position")
-      .classList.remove("form__wrong", "form__right");
-    document
-      .querySelector("#location")
-      .classList.remove("form__wrong", "form__right");
-    document
-      .querySelector("#link")
-      .classList.remove("form__wrong", "form__right");
-  }
 }

@@ -20,6 +20,11 @@
     background-color: $white_0;
   }
 
+  &--dragging {
+    opacity: 0.5;
+    transform: rotate(-2deg);
+  }
+
   &--supercard {
     // border: 4px solid $black_800;
     background-color: $black_700;
