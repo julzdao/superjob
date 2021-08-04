@@ -65,7 +65,7 @@ export default function dragger() {
       event.preventDefault();
       // Get the current stage in which the drop event happens
       let currentStage;
-
+      
       for (let i = 0; i < event.path.length; i++) {
         if (event.path[i].className === "stage__card-container") {
           currentStage = event.path[i];

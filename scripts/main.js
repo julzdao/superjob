@@ -17,15 +17,23 @@ document.addEventListener("DOMContentLoaded", (e) => {
 
 document.querySelector(".form").addEventListener("submit", (e) => {
   e.preventDefault();
-  const company = document.querySelector("#company").value.trim()
+  const company = document.querySelector("#company").value.trim();
   const position = document.querySelector("#position").value.trim();
   const location = document.querySelector("#location").value.trim();
   const offerLink = document.querySelector("#link").value.trim();
   const isSuperJob = document.querySelector("#super").checked;
-  const date = new Date;
+  const date = new Date();
   const stage = Modals.getCurrentStage();
   if (Modals.validateForm()) {
-    const job = new Job(company, position, location, offerLink, isSuperJob, stage, date);
+    const job = new Job(
+      company,
+      position,
+      location,
+      offerLink,
+      isSuperJob,
+      stage,
+      date
+    );
     //Save job into the localStorage
     Storage.saveJob(job);
     UI.addJobToStage(job);
