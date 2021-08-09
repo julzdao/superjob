@@ -19,3 +19,16 @@
 .button--long {
   width: 100%;
 }
+
+.link-button {
+  border: 1px solid rgb(68, 117, 207);
+  color: rgb(68, 117, 207);
+  border-radius: 4px;
+  width: 3.8em;
+  height: 1.6em;
+  font-size: 0.7em;
+  &:hover {
+    background-color: rgb(68, 117, 207);
+    color: white;
+  }
+}

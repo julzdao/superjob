@@ -6,11 +6,12 @@
   @include addBackground("card");
   @include flex(0, center, space-between);
   @include addTransition();
+  flex-wrap: wrap;
   width: 100%;
-  min-height: 70px;
+  min-height: 88px;
   background-color: rgba(255, 255, 255, 0.829);
   border-radius: 10px;
-  padding: 0 1em;
+  padding: 0.6em 1em 0.2em 1em;
   margin-bottom: 0.8em;
   cursor: pointer;
 
@@ -46,6 +47,10 @@
     .circular-img {
       color: white;
     }
+
+    .icon {
+      filter: invert(100%);
+    }
   }
 
   &__left-wrapper {
@@ -68,6 +73,12 @@
   &__right-wrapper {
     @include flex(column, flex-end, space-between);
     height: 45px;
+  }
+
+  &__down-wrapper {
+    @include flex(row, center, space-between);
+    height: 22px;
+    width: 100%;
   }
 
   &__trash-and-tag {
