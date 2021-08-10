@@ -5,7 +5,7 @@ export default class Storage {
     jobArray.push(job);
     //Parse to JSON
     let jobArrayJSON = JSON.stringify(jobArray);
-    //Save array into localStorage
+    //Save array into localStorage 
     localStorage.setItem("jobApplications", jobArrayJSON);
   }
 
