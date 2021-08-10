@@ -20,6 +20,7 @@ document.addEventListener("DOMContentLoaded", (e) => {
   //Initialize Listeners
   Listeners.listenErrorImg()
   Listeners.listenSupercheck();
+  Listeners.deleteJob();
 });
 
 

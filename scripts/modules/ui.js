@@ -42,7 +42,7 @@ export default class UI {
       <span class="tag">${job.location}</span>                        
     </div> 
     <div class="card__down-wrapper">
-      <button class="link-button" draggable="false">Link</button>
+      <a href="${job.link}" class="link-button" draggable="false" target="_blank">Link</a>
       <button class="icon icon--arrow" draggable="false"> 
         <img src="/assets/icons/down-arrow.png" alt="expand icon" draggable="false">
       </button>
@@ -60,7 +60,7 @@ export default class UI {
     stage.insertAdjacentElement("afterbegin", card);
   }
 
-  static deleteJob() {}
+  // static deleteJob() {}
 
   static showAlert() {}
 

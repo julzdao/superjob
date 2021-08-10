@@ -12,4 +12,8 @@ export default class Storage {
   static getJobs() {
     return JSON.parse(localStorage.getItem("jobApplications")) || [];
   }
+
+  static deleteJob(index) {
+    jobArray.splice(index, 1);
+  }
 }

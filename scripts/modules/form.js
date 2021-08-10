@@ -72,6 +72,7 @@ const Form = (() => {
     UI.addJobToStage(job);
     Listeners.listenSupercheck();
     Listeners.listenErrorImg();
+    Listeners.deleteJob();
   };
 
   /* Listeners */
