@@ -38,27 +38,11 @@ const Listeners = (() => {
       });
     });
   };
-    const deleteJob = () => {
-      // Select all cards
-      const cards = document.querySelectorAll(".card");
-      cards.forEach((card) => {
-        // Within each card, select the trash icon
-        const trashIcon = card.querySelector(".icon--trash"); 
-        // Get array of Storage jobs
-        const currentJobsArr = Storage.getJobs();
-
-        trashIcon.addEventListener("click", () => {
-          const index = currentJobsArr.indexOf(card);
-          currentJobsArr.splice(index, 1);
-        });
-      });
-    }
   
 
   return {
     listenSupercheck,
     listenErrorImg,
-    deleteJob,
   };
 })();
 

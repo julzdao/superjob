@@ -9,7 +9,7 @@ import dragger from "./modules/dragger.js";
 document.addEventListener("DOMContentLoaded", (e) => {
   //Fetch jobs from the localStorage and display them
   UI.displayJobs(Storage.getJobs());
-  
+  Storage.deleteJob();
   //Initialize Dragger
   dragger();
 
@@ -20,7 +20,5 @@ document.addEventListener("DOMContentLoaded", (e) => {
   //Initialize Listeners
   Listeners.listenErrorImg()
   Listeners.listenSupercheck();
-  Listeners.deleteJob();
 });
-
 
