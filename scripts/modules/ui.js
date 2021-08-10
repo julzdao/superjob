@@ -41,6 +41,19 @@ export default class UI {
       )}>
       <span class="tag">${job.location}</span>                        
     </div> 
+    <div class="card__down-wrapper">
+      <button class="link-button" draggable="false">Link</button>
+      <button class="icon icon--arrow" draggable="false"> 
+        <img src="/assets/icons/down-arrow.png" alt="expand icon" draggable="false">
+      </button>
+      <div>
+        <button class="icon icon--edit" draggable="false">
+          <img src="/assets/icons/edit.png" alt="edit icon" draggable="false">
+        </button>
+        <button class="icon icon--trash" draggable="false"> 
+          <img src="/assets/icons/trash.svg" alt="trash icon" draggable="false">
+        </button>
+      </div>
     `;
 
     //Append card as the first child of the stage

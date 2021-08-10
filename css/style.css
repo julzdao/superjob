@@ -275,11 +275,12 @@ button {
   align-items: center;
   justify-content: space-between;
   transition: all 250ms ease;
+  flex-wrap: wrap;
   width: 100%;
-  min-height: 70px;
+  min-height: 88px;
   background-color: rgba(255, 255, 255, 0.829);
   border-radius: 10px;
-  padding: 0 1em;
+  padding: 0.6em 1em 0.2em 1em;
   margin-bottom: 0.8em;
   cursor: pointer;
 }
@@ -308,6 +309,9 @@ button {
 }
 .card--supercard .circular-img {
   color: white;
+}
+.card--supercard .icon {
+  filter: invert(100%);
 }
 .card__left-wrapper {
   display: flex;
@@ -338,6 +342,14 @@ button {
   align-items: flex-end;
   justify-content: space-between;
   height: 45px;
+}
+.card__down-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 22px;
+  width: 100%;
 }
 .card__trash-and-tag {
   display: flex;
@@ -372,6 +384,19 @@ button {
 
 .button--long {
   width: 100%;
+}
+
+.link-button {
+  border: 1px solid #4475cf;
+  color: #4475cf;
+  border-radius: 4px;
+  width: 3.8em;
+  height: 1.6em;
+  font-size: 0.7em;
+}
+.link-button:hover {
+  background-color: #4475cf;
+  color: white;
 }
 
 input[type=checkbox] {
@@ -537,17 +562,24 @@ input[type=checkbox]:checked::before {
   font-size: 1.18em;
 }
 
-.trash {
+.icon {
   width: 1.1em;
   height: 1.1em;
   margin-left: 0.2em;
 }
-.trash img {
+.icon img {
   width: 100%;
   opacity: 0.4;
 }
-.trash img:hover {
+.icon img:hover {
   opacity: 1;
+}
+.icon--edit {
+  width: 1em;
+  height: 1em;
+}
+.icon--arrow {
+  margin-left: 0.3em;
 }
 
 .scroll-blocked {
