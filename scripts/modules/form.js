@@ -34,6 +34,8 @@ const Form = (() => {
       isSuperJob: isSuperJob.checked,
       stage: Modals.getCurrentStage(),
       date: new Date(),
+      // Assign the id with the first letter + random num
+      id: `${company.value.trim()[0]}${position.value.trim()[0]}${location.value.trim()[0]}${Math.floor(Math.random() * 10)}`.toLowerCase(),
     };
   };
 
@@ -64,14 +66,16 @@ const Form = (() => {
     isSuperJob,
     stage,
     date,
+    id,
   }) =>
-    new Job(company, position, location, offerLink, isSuperJob, stage, date);
+    new Job(company, position, location, offerLink, isSuperJob, stage, date, id);
 
   const _addJob = (job) => {
     Storage.saveJob(job);
     UI.addJobToStage(job);
     Listeners.listenSupercheck();
     Listeners.listenErrorImg();
+    Listeners.deleteJob();
   };
 
   /* Listeners */

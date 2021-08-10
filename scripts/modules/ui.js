@@ -1,3 +1,4 @@
+
 export default class UI {
   static displayJobs(jobs) {
     jobs.forEach((job) => UI.addJobToStage(job));
@@ -18,7 +19,8 @@ export default class UI {
     //Create card element with Job data
     const card = document.createElement("div");
     card.classList.add("card");
-    // card.id = `${job.company}`;
+    // Add an id with the first letters of company, position and location+ random num
+    card.id = job.id;
     if (job.superjob) {
       card.classList.add("card--supercard");
     }
@@ -42,7 +44,7 @@ export default class UI {
       <span class="tag">${job.location}</span>                        
     </div> 
     <div class="card__down-wrapper">
-      <button class="link-button" draggable="false">Link</button>
+      <a href="${job.link}" class="link-button" draggable="false" target="_blank">Link</a>
       <button class="icon icon--arrow" draggable="false"> 
         <img src="/assets/icons/down-arrow.png" alt="expand icon" draggable="false">
       </button>
@@ -60,7 +62,10 @@ export default class UI {
     stage.insertAdjacentElement("afterbegin", card);
   }
 
-  static deleteJob() {}
+  static deleteJob() {
+      // Select all cards
+      
+  }
 
   static showAlert() {}
 

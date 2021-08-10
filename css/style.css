@@ -393,6 +393,7 @@ button {
   width: 3.8em;
   height: 1.6em;
   font-size: 0.7em;
+  text-decoration: none;
 }
 .link-button:hover {
   background-color: #4475cf;
