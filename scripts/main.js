@@ -9,16 +9,16 @@ import dragger from "./modules/dragger.js";
 document.addEventListener("DOMContentLoaded", (e) => {
   //Fetch jobs from the localStorage and display them
   UI.displayJobs(Storage.getJobs());
-  Storage.deleteJob();
   //Initialize Dragger
   dragger();
-
+  
   //Initialize Modals
   Modals.openModalListener();
   Modals.closeModalListener();
-
+  
   //Initialize Listeners
   Listeners.listenErrorImg()
   Listeners.listenSupercheck();
+  UI.deleteJobListener();
 });
 

@@ -1,4 +1,4 @@
-
+import Storage from "./localStorage.js";
 export default class UI {
   static displayJobs(jobs) {
     jobs.forEach((job) => UI.addJobToStage(job));
@@ -62,9 +62,17 @@ export default class UI {
     stage.insertAdjacentElement("afterbegin", card);
   }
 
-  static deleteJob() {
-      // Select all cards
-      
+  static deleteJobListener() {
+    const trashIcons = document.querySelectorAll(".icon--trash");
+    
+    trashIcons.forEach(icon => {
+      icon.addEventListener("click", () => {
+        const card = icon.closest(".card");
+        const id = card.id;
+        card.remove();
+        Storage.deleteJob(id);
+      })
+    })
   }
 
   static showAlert() {}

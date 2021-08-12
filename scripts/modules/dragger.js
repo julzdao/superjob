@@ -1,3 +1,5 @@
+import Storage from "./localStorage.js";
+
 export default function dragger() {
   let draggedCard;
 
@@ -68,6 +70,11 @@ export default function dragger() {
       event.target.style.background = "";
       draggedCard.parentNode.removeChild(draggedCard);
       currentStage.insertBefore(draggedCard, currentStage.children[dropIndex]);
+
+      //Storage
+      let cardId = draggedCard.id;
+      let stageName = currentStage.dataset.stage;
+      Storage.editJob(cardId, "stage", stageName);
     },
     false
   );

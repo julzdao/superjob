@@ -75,7 +75,6 @@ const Form = (() => {
     UI.addJobToStage(job);
     Listeners.listenSupercheck();
     Listeners.listenErrorImg();
-    Listeners.deleteJob();
   };
 
   /* Listeners */
@@ -92,6 +91,9 @@ const Form = (() => {
       _addJob(job);
       //Clear inputs from form
       _clearInputs(inputs);
+      //Searchs and listen all trash icons
+      UI.deleteJobListener();
+
     }
   });
 })();

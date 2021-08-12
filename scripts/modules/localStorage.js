@@ -5,30 +5,36 @@ export default class Storage {
     jobArray.push(job);
     //Parse to JSON
     let jobArrayJSON = JSON.stringify(jobArray);
-    //Save array into localStorage 
+    //Save array into localStorage
     localStorage.setItem("jobApplications", jobArrayJSON);
+  }
+
+  static saveJobArr(arr) {
+    let arrJSON = JSON.stringify(arr);
+    localStorage.setItem("jobApplications", arrJSON);
   }
 
   static getJobs() {
     return JSON.parse(localStorage.getItem("jobApplications")) || [];
   }
 
-  static deleteJob() {
-    const trashIcons = document.querySelectorAll(".icon--trash");
+  static getJob(jobId) {
+    const jobs = this.getJobs();
+    const index = jobs.findIndex((key) => key.id === jobId);
+    return jobs[index];
+  }
 
-    trashIcons.forEach((icon) => {
-      icon.addEventListener("click", function () {
-        const card = icon.parentElement.parentElement.parentElement; 
-        const currentArr = JSON.parse(localStorage.getItem("jobApplications"));
+  static editJob(jobId, key, val) {
+    const jobs = this.getJobs();
+    const index = jobs.findIndex((key) => key.id === jobId);
+    jobs[index][key] = val;
+    this.saveJobArr(jobs);
+  }
 
-        for (let i = 0; i < currentArr.length; i++) {
-          if (currentArr[i].id === card.id) {
-            JSON.parse(localStorage.getItem("jobApplications")).splice(currentArr.indexOf(currentArr[i]), 1);
-          }
-        }
-        console.log(JSON.parse(localStorage.getItem("jobApplications"))[0].company)
-
-      })
-    })
+  static deleteJob(jobId) {
+    const jobs = this.getJobs();
+    const index = jobs.findIndex((key) => key.id === jobId);
+    jobs.splice(index, 1);
+    this.saveJobArr(jobs);
   }
 }
