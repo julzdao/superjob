@@ -33,8 +33,7 @@ export default class Storage {
 
   static deleteJob(jobId) {
     const jobs = this.getJobs();
-    const index = jobs.findIndex((key) => key.id === jobId);
-    jobs.splice(index, 1);
-    this.saveJobArr(jobs);
+    const filteredJobs = jobs.filter(job => job.id !== jobId)
+    this.saveJobArr(filteredJobs);
   }
 }

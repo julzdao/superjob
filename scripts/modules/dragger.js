@@ -1,15 +1,17 @@
 import Storage from "./localStorage.js";
 
-export default function dragger() {
-  let draggedCard;
+const Dragger = (() => {
+  /* Private props */
+  let _draggedCard;
 
+  /* Listeners */
   document.addEventListener(
     "dragstart",
     function (event) {
       // store a ref. on the dragged elem
-      draggedCard = event.target;
+      _draggedCard = event.target;
       // make it half transparent
-      draggedCard.style.opacity = 0.5;
+      _draggedCard.style.opacity = 0.5;
     },
     false
   );
@@ -68,14 +70,17 @@ export default function dragger() {
 
       // Insert card just after the index position from the card before
       event.target.style.background = "";
-      draggedCard.parentNode.removeChild(draggedCard);
-      currentStage.insertBefore(draggedCard, currentStage.children[dropIndex]);
+      _draggedCard.parentNode.removeChild(_draggedCard);
+      currentStage.insertBefore(_draggedCard, currentStage.children[dropIndex]);
 
       //Storage
-      let cardId = draggedCard.id;
+      let cardId = _draggedCard.id;
       let stageName = currentStage.dataset.stage;
+      console.log(cardId);
       Storage.editJob(cardId, "stage", stageName);
     },
     false
   );
-}
+})();
+
+export { Dragger };
