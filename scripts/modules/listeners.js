@@ -8,13 +8,18 @@ const Listeners = (() => {
   const listenSupercheck = () => {
     const checkboxes = document.querySelectorAll("input[name=supercheck]");
     checkboxes.forEach((checkbox) => {
+      const card = checkbox.closest(".card");
+      const id = card.id;
       checkbox.addEventListener("change", () => {
-        const card = checkbox.parentElement.parentElement;
-
         //If the checkbox is checked, add supercard class otherwise remove it.
-        checkbox.checked
-          ? card.classList.add("card--supercard")
-          : card.classList.remove("card--supercard");
+        //Save changes to storage
+        if(checkbox.checked){
+          card.classList.add("card--supercard")
+          Storage.editJob(id, "superjob", true);
+        } else {
+          card.classList.remove("card--supercard");
+          Storage.editJob(id, "superjob", false);
+        }
       });
     });
   };
