@@ -91,7 +91,7 @@ const Form = (() => {
       _addJob(job);
       //Clear inputs from form
       _clearInputs(inputs);
-      //Searchs and listen all trash icons
+      //Selects all trash icons again
       UI.deleteJobListener();
 
     }
