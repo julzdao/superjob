@@ -11,22 +11,14 @@ Go to the [Live Preview](#);
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project"> ➤ About The Project</a></li>
-    <li><a href="#prerequisites"> ➤ Prerequisites</a></li>
     <li><a href="#folder-structure"> ➤ Folder Structure</a></li>
-    <li><a href="#dataset"> ➤ Dataset</a></li>
-    <li><a href="#roadmap"> ➤ Roadmap</a></li>
-    <li>
-      <a href="#preprocessing"> ➤ Preprocessing</a>
-      <ul>
-        <li><a href="#preprocessed-data">Pre-processed data</a></li>
-        <li><a href="#statistical-feature">Statistical feature</a></li>
-        <li><a href="#topological-feature">Topological feature</a></li>
-      </ul>
-    </li>
-    <!--<li><a href="#experiments">Experiments</a></li>-->
-    <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
-    <li><a href="#references"> ➤ References</a></li>
-    <li><a href="#contributors"> ➤ Contributors</a></li>
+    <li><a href="#the-challenge"> ➤ The Challenge</a></li>
+    <li><a href="#features"> ➤ Features</a></li>
+    <li><a href="#screenshots"> ➤ Screenshots</a></li>
+    <li><a href="#improvements"> ➤ Improvements</a></li>
+    <li><a href="#faq"> ➤ FAQ</a></li>
+    <li><a href="#attribution"> ➤ Attribution </a></li>
+    <li><a href="#team"> ➤ Team</a></li>
   </ol>
 </details>
 
@@ -35,12 +27,9 @@ Go to the [Live Preview](#);
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project"> :pencil: About The Project</h2>
 
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-## Overview
+Superjob is a Job tracking web application made in Vanilla Javascript. This is the result of a collaboration between Nicolás Ríos and Julen Diaz for one of the assignments in The Odin Project. The Challenge was to build a Book Storage application where you could use it as an online library. However, because of our current job hunt in the field of Software development, instead of books, we thought about building a simple web application to track the best job offers out there in a Kanban Style. 
 
-This is the first assignment from the Javascript course on The Odin Project. The main task was to build a kind of Library App to store all the books that you are reading. Instead of going for the simpler route, giving the case that I am currently actively looking for a job, I wanted to build a job board to keep track of all the applications.
-
-With a little bit of research, I saw a few other apps out there with a similar idea with the one I had. For educational purposes, I really do not aspire to create a fully fledge application. In that case, I will keep it simple and use it as a way of learning about Object-Oriented Programming and the curiosity of how to create kanban boards.
+Even though we are still working on it, we have decided to share it with the community in case anyone would like to contribute. We think this is a great way of getting stronger as developers, so we hope that this project serves as an example of how to work on a team to build any student project. 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
@@ -51,143 +40,132 @@ With a little bit of research, I saw a few other apps out there with a similar i
     code
     .
     │
-    ├── data
-    │   ├── raw_data
-    │   │   ├── phone
-    │   │   │   ├── accel
-    │   │   │   └── gyro
-    │   │   ├── watch
-    │   │       ├── accel
-    │   │       └── gyro
-    │   │
-    │   ├── transformed_data
-    │   │   ├── phone
-    │   │   │   ├── accel
-    │   │   │   └── gyro
-    │   │   ├── watch
-    │   │       ├── accel
-    │   │       └── gyro
-    │   │
+    ├── assets
+    │   ├── icons
+    │   ├── images
     │   ├── feature_label_tables
-    │   │    ├── feature_phone_accel
-    │   │    ├── feature_phone_gyro
-    │   │    ├── feature_watch_accel
-    │   │    ├── feature_watch_gyro
-    │   │
-    │   ├── wisdm-dataset
-    │        ├── raw
-    │        │   ├── phone
-    │        │   ├── accel
-    │        │   └── gyro
-    │        ├── watch
-    │            ├── accel
-    │            └── gyro
-    │
-    ├── CNN_Impersonal_TransformedData.ipynb
-    ├── CNN_Personal_TransformedData.ipynb  
-    ├── CNN_Impersonal_RawData.ipynb    
-    ├── CNN_Personal_RawData.ipynb 
-    ├── Classifier_SVM_Personal.ipynb
-    ├── Classifier_SVM_Impersonal.ipynb
-    ├── statistical_analysis_time_domain.py
-    ├── Topological data analysis.ipynb  
-## The Challenge
-
-- [ ] Build a job board to store all job applications
-- [ ] Use Object-Oriented Programming for new Applications
-- [ ] Create the Kanban feature to grap each application
-- [ ] Create an home-made illustration for the thumbnail
-- [ ] Use an API for the logos
-- [ ] Have fun
-
-![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
-## Features
-
-☢ Deeply Reactive, Directly Mutate State at any level to Update Component
-
-⚡ Blazing Fast - 25% faster than `useState`
-
-📺 No Extra Re-Renders - Auto Mutation batching
-
-🌿 Always Fresh State, _unlike_ `useState`
-
-🧬 Reactive Bindings For Inputs
-
-⚛ Reactive Props
-
-☕ Zero Dependencies, Ultra Light-Weight `< 1kb`
-
-<br/>
+    ├── css                        // Folder to compile all the css
+    │   ├── styles.css
+    │   ├── styles.css.map
+    ├── sass                        // Everything with sass
+    │   ├── 1_base
+    │   ├── 2_utils
+    │   ├── 3_layout
+    │   ├── 4_modules
+    │   ├── 5_states
+    │   ├── 6_queries
+    │   ├── style.scss              // Bridge to bring all sass modules together
+    ├── scripts                     // javascript code herre
+    │   ├── modules                 // Playing with modules to get a feel for modular js
+    │   │    ├── api.js             
+    │   │    ├── dragger.js
+    │   │    ├── form.js
+    │   │    ├── job.js
+    │   │    ├── listeners.js
+    │   │    ├── localStorage.js   
+    │   │    ├── modals.js           
+    │   │    ├── ui.js
+    │   ├── main.js           
+    ├── .gitignore 
+    ├── index.html 
+    ├── README.md 
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-### Useful Sources
+<h2 id="the-challenge"> :cactus: The Challenge</h2>
 
-- [How to get values from an HTML form](https://stackoverflow.com/questions/3547035/javascript-getting-html-form-values)
-- [How to get the checked value from a checkbox](https://www.javascripttutorial.net/javascript-dom/javascript-checkbox/)
-- [How to get Y position from a div](https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window)
-- [Get Bounding Client Rect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect)
-- [Git Repo as a Module ES6 Example](https://github.com/mdn/js-examples/tree/master/modules)
+- [X] Build a web application to track the best jobs
+- [X] Understand how to use IIFE's
+- [X] Create the Kanban feature to grap each application
+- [X] Use localStorage to save the jobs
+- [X] Use an API for getting company logos
+- [X] Have fun
+- [ ] Make it Live
 
-## Approaches
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-## Additional Improvements
+<h2 id="features"> Features </h2>
 
-- [ ] Add more information for each position
-- [ ] Be able to open-up each position to see more details
-- [ ] Add a profile section to keep your data online or locally
+☢ Add a new job with the help of a modal form
+
+⚡ Feature superjobs with a checkbox and black theme status
+
+📺 Drag jobs from one stage into another like a Kanban Board
+
+🌿 Add a link to the Original job offer to check more details
+
+🧬 Delete jobs with a little icon on the right-bottom corner
+
+⚛ Count jobs in each stage
+
+☕ Get company logo with API 
+
+🌿 Store jobs in a localStorage
 
 
-## ❓ FAQs
+<br/>
 
-<!-- faq 1 -->
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 id="screenshots"> Screenshots </h2>
+
+![fullscreen](https://user-images.githubusercontent.com/66780327/130353281-3aea537f-00b3-4099-8fdd-c8a18426b8ea.png)
+
+![supercard](https://user-images.githubusercontent.com/66780327/130353300-db8bed27-678f-4a4c-a89f-8ea9e68b66eb.png)
+
+![whitecard](https://user-images.githubusercontent.com/66780327/130353307-4e25351c-24fd-4362-92dd-646d50e3593e.png)
+
+![form](https://user-images.githubusercontent.com/66780327/130353313-2dd04e3f-9921-4277-bb47-cf833511d8e8.png)
+
+![form-validation](https://user-images.githubusercontent.com/66780327/130353330-5d87786a-2ec3-41a3-9e49-ec618a58ab5c.png)
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 id="improvements"> Additional Improvements </h2>
+
+- [ ] Expand each job application to see more details 
+- [ ] Edit each card with edit icon next to trash
+- [ ] Add a profile section to keep your data online or locally 
+- [ ] Add Tutorial to teach how to add a new job 
+- [ ] Make it open-source so everyone can enjoy it
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 id="faq"> FAQ </h2>
+
+<!-- FAQ 1-->
 <details>
-<summary>Can I use useRS hook more than once ? </summary>
+<summary> How can I add a new Job?</summary>
+<br/>
+Just by clicking on the "+" black button on each stage, you can fill up the details of each job application, click on submit and be able to drag it wherever you want. 
+</details>
 <br/>
 
-**Yes.** You don't have to put all of the state of the component inside the state object. You can use the hook more than once.
-
-#### Example
-
-```javascript
-const todos = useRS([])
-const form = useRS({
-  name: '',
-  age: 0,
-})
-```
-
-While this is okay, **I would advise you to not do this**, Because putting all of state in one object gives you **better *performance** in the case of radioactive-state. (because of better mutation batching)
-
-It would also be **hard to store simple value types**, because simple value types can not be mutated and so you would need to wrap it inside an object.
-
-#### Example
-
-```javascript
-const count = useRS(0) // invalid, gives error ❌
-```
-
-```javascript
-const count = useRS( { value: 0 }) // works ✅
-```
-
-This would also make creating reactive bindings awkward. That's why it is **strongly recommended to store all the state into a single object** by using useRS only once !
-
----
-</details>
-
-
-<!-- FAQ 2 -->
+<!-- FAQ 2-->
 <details>
-<summary> Is this magic, How does it work ? </summary>
+<summary> Did you use a Pair-Programming Approach?</summary>
 <br/>
-radioactive-state uses **JavaScript Proxy** to create a deeply reactive state by recursively proxifying the state. Whenever a mutation occurs in the state tree, a function is called with information about where the mutation took place which schedules an async re-render to update the component to reflect the changes in state to UI.
+More or less. We started the project with the aim of trying out this pair-programming technique. Apart from that, we have also worked on our own and merge together the code in a ping-pong style. The whole experience have been a great one for learning and sharing the best tips and strategies to make our code stronger. 
 </details>
 <br/>
 
+<!-- FAQ 3-->
+<details>
+<summary> Can I contribute to the project?</summary>
+<br/>
+Absolutely! The goal of this application is to be able to track the best jobs out there so we can take a thoughtful decision about our future job. Completely free. Take into account that this was supposed to be an student project, so right now is really Vanilla. We are working little by little on make it live for everyone to enjoy.  
+</details>
+<br/>
 
-## Team
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-[![Harsh Vijay](https://avatars1.githubusercontent.com/u/12688534?v=3&s=144)](https://github.com/iharsh234)  | [![Quandl.com](https://github.com/iharsh234/WebApp/blob/master/images/quandl.jpg)](https://www.quandl.com/)
----|---
-[Harsh Vijay ](https://github.com/iharsh234) |[Quandl](https://www.quandl.com)
+<h2 id="attribution"> Attribution </h2>
+
+- Company Logo API by Clearbit [Documentation](https://clearbit.com/docs#logo-api)
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<h2 id="team"> Team </h2>
+
+- Nicolás Ríos 
+- Julen Diaz 
