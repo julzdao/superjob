@@ -72,7 +72,7 @@ Even though we are still working on it, we have decided to share it with the com
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="the-challenge"> :cactus: The Challenge</h2>
+<h2 id="the-challenge"> 🎯 The Challenge</h2>
 
 - [X] Build a web application to track the best jobs
 - [X] Understand how to use IIFE's
@@ -84,30 +84,30 @@ Even though we are still working on it, we have decided to share it with the com
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="features"> Features </h2>
+<h2 id="features"> 🔥 Features </h2>
 
-☢ Add a new job with the help of a modal form
+👔 Add a new job with the help of a modal form
 
-⚡ Feature superjobs with a checkbox and black theme status
+✅️ Feature superjobs with a checkbox and black theme status
 
-📺 Drag jobs from one stage into another like a Kanban Board
+🐲 Drag jobs from one stage into another like a Kanban Board
 
-🌿 Add a link to the Original job offer to check more details
+🔗 Add a link to the Original job offer to check more details
 
-🧬 Delete jobs with a little icon on the right-bottom corner
+🗑️ Delete jobs with a little icon on the right-bottom corner
 
-⚛ Count jobs in each stage
+⏳️ Count jobs in each stage
 
-☕ Get company logo with API 
+🏦 Get company logo with API 
 
-🌿 Store jobs in a localStorage
+🏬 Store jobs in a localStorage
 
 
 <br/>
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="screenshots"> Screenshots </h2>
+<h2 id="screenshots"> 📷 Screenshots </h2>
 
 ![fullscreen](https://user-images.githubusercontent.com/66780327/130353281-3aea537f-00b3-4099-8fdd-c8a18426b8ea.png)
 
@@ -121,7 +121,7 @@ Even though we are still working on it, we have decided to share it with the com
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="improvements"> Additional Improvements </h2>
+<h2 id="improvements"> ➕️ Additional Improvements </h2>
 
 - [ ] Expand each job application to see more details 
 - [ ] Edit each card with edit icon next to trash
@@ -131,7 +131,7 @@ Even though we are still working on it, we have decided to share it with the com
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="faq"> FAQ </h2>
+<h2 id="faq"> ❓️ FAQ </h2>
 
 <!-- FAQ 1-->
 <details>
@@ -159,13 +159,13 @@ Absolutely! The goal of this application is to be able to track the best jobs ou
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="attribution"> Attribution </h2>
+<h2 id="attribution"> 💬 Attribution </h2>
 
 - Company Logo API by Clearbit [Documentation](https://clearbit.com/docs#logo-api)
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
-<h2 id="team"> Team </h2>
+<h2 id="team"> 👥 Team </h2>
 
 - Nicolás Ríos 
 - Julen Diaz 

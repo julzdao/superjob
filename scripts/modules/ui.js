@@ -15,11 +15,10 @@ export default class UI {
   static addJobToStage(job) {
     //Select the stage to add the job
     const stage = document.querySelector(`[data-stage="${job.stage}"]`);
-    const jobsCounter = stage.parentElement.querySelector(".stage__stage-count"); 
-
-    // Update jobCounter with the number of jobs within the stage
-    jobsCounter.innerHTML = `${stage.children.length + 1} jobs`;
-
+    // // Update jobCounter with the number of jobs within the stage
+    // const jobsCounter = stage.parentElement.querySelector(".stage__stage-count"); 
+    // jobsCounter.innerHTML = `${stage.children.length + 1} jobs`;
+    
     //Create card element with Job data
     const card = document.createElement("div");
     card.classList.add("card");
@@ -64,6 +63,7 @@ export default class UI {
 
     //Append card as the first child of the stage
     stage.insertAdjacentElement("afterbegin", card);
+    UI.updateJobCounters();
   }
 
   static deleteJobListener() {
@@ -75,7 +75,17 @@ export default class UI {
         const id = card.id;
         card.remove();
         Storage.deleteJob(id);
+        UI.updateJobCounters();
       })
+    })
+  };
+
+  static updateJobCounters() {
+    const jobCounters = document.querySelectorAll(".stage__stage-count");
+    jobCounters.forEach((counter) => {
+      const stage = counter.parentElement.parentElement;
+      const stageContainer = stage.querySelector(".stage__card-container");
+      counter.innerHTML = `${stageContainer.children.length} jobs`;
     })
   }
 

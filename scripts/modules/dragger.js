@@ -1,4 +1,5 @@
 import Storage from "./localStorage.js";
+import UI from "./ui.js";
 
 const Dragger = (() => {
   /* Private props */
@@ -76,8 +77,10 @@ const Dragger = (() => {
       //Storage
       let cardId = _draggedCard.id;
       let stageName = currentStage.dataset.stage;
-      console.log(cardId);
       Storage.editJob(cardId, "stage", stageName);
+
+      // Update jobCounter
+      UI.updateJobCounters();
     },
     false
   );
