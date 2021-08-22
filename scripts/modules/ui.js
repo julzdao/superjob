@@ -15,6 +15,10 @@ export default class UI {
   static addJobToStage(job) {
     //Select the stage to add the job
     const stage = document.querySelector(`[data-stage="${job.stage}"]`);
+    const jobsCounter = stage.parentElement.querySelector(".stage__stage-count"); 
+
+    // Update jobCounter with the number of jobs within the stage
+    jobsCounter.innerHTML = `${stage.children.length + 1} jobs`;
 
     //Create card element with Job data
     const card = document.createElement("div");

@@ -4,32 +4,93 @@
 
 Go to the [Live Preview](#);
 
-## Table of contents
+<!-- TABLE OF CONTENTS -->
+<h2 id="table-of-contents"> :book: Table of Contents</h2>
 
-- [Overview](#overview)
-- [The challenge](#the-challenge)
-- [Key Features](#key-features)
-- [My process](#my-process)
-  - [Stable Architecture](#stable-architecture)
-  - [Understand the problem](#understand-the-problem)
-  - [Pseudocode](#pseudocode)
-  - [Mindmap](#mindmap)
-  - [Useful sources](#useful-sources)
-- [Approaches](#approaches)
-  - [Main Operator](#main-operator)
-  - [Clear All](#clear-all)
-  - [Check Decimals](#check-decimals)
-  - [Keyboard Support](#keyboard-support)
-- [Additional Improvements](#additional-improvements)
-- [Attribution](#attribution)
-- [Contact](#contact)
+<details open="open">
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project"> ➤ About The Project</a></li>
+    <li><a href="#prerequisites"> ➤ Prerequisites</a></li>
+    <li><a href="#folder-structure"> ➤ Folder Structure</a></li>
+    <li><a href="#dataset"> ➤ Dataset</a></li>
+    <li><a href="#roadmap"> ➤ Roadmap</a></li>
+    <li>
+      <a href="#preprocessing"> ➤ Preprocessing</a>
+      <ul>
+        <li><a href="#preprocessed-data">Pre-processed data</a></li>
+        <li><a href="#statistical-feature">Statistical feature</a></li>
+        <li><a href="#topological-feature">Topological feature</a></li>
+      </ul>
+    </li>
+    <!--<li><a href="#experiments">Experiments</a></li>-->
+    <li><a href="#results-and-discussion"> ➤ Results and Discussion</a></li>
+    <li><a href="#references"> ➤ References</a></li>
+    <li><a href="#contributors"> ➤ Contributors</a></li>
+  </ol>
+</details>
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- ABOUT THE PROJECT -->
+<h2 id="about-the-project"> :pencil: About The Project</h2>
+
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 ## Overview
 
 This is the first assignment from the Javascript course on The Odin Project. The main task was to build a kind of Library App to store all the books that you are reading. Instead of going for the simpler route, giving the case that I am currently actively looking for a job, I wanted to build a job board to keep track of all the applications.
 
 With a little bit of research, I saw a few other apps out there with a similar idea with the one I had. For educational purposes, I really do not aspire to create a fully fledge application. In that case, I will keep it simple and use it as a way of learning about Object-Oriented Programming and the curiosity of how to create kanban boards.
 
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+
+<!-- :paw_prints:-->
+<!-- FOLDER STRUCTURE -->
+<h2 id="folder-structure"> :cactus: Folder Structure</h2>
+
+    code
+    .
+    │
+    ├── data
+    │   ├── raw_data
+    │   │   ├── phone
+    │   │   │   ├── accel
+    │   │   │   └── gyro
+    │   │   ├── watch
+    │   │       ├── accel
+    │   │       └── gyro
+    │   │
+    │   ├── transformed_data
+    │   │   ├── phone
+    │   │   │   ├── accel
+    │   │   │   └── gyro
+    │   │   ├── watch
+    │   │       ├── accel
+    │   │       └── gyro
+    │   │
+    │   ├── feature_label_tables
+    │   │    ├── feature_phone_accel
+    │   │    ├── feature_phone_gyro
+    │   │    ├── feature_watch_accel
+    │   │    ├── feature_watch_gyro
+    │   │
+    │   ├── wisdm-dataset
+    │        ├── raw
+    │        │   ├── phone
+    │        │   ├── accel
+    │        │   └── gyro
+    │        ├── watch
+    │            ├── accel
+    │            └── gyro
+    │
+    ├── CNN_Impersonal_TransformedData.ipynb
+    ├── CNN_Personal_TransformedData.ipynb  
+    ├── CNN_Impersonal_RawData.ipynb    
+    ├── CNN_Personal_RawData.ipynb 
+    ├── Classifier_SVM_Personal.ipynb
+    ├── Classifier_SVM_Impersonal.ipynb
+    ├── statistical_analysis_time_domain.py
+    ├── Topological data analysis.ipynb  
 ## The Challenge
 
 - [ ] Build a job board to store all job applications
@@ -39,87 +100,26 @@ With a little bit of research, I saw a few other apps out there with a similar i
 - [ ] Use an API for the logos
 - [ ] Have fun
 
-## Key Features
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
+## Features
 
-- Add new Job Applications
-- Be able to transfer Applications from one stage into another (Kanban)
-- Add 3 simple data for each application (Business, Position, Location)
-- Search for the logo of the Business with an API
-- Scroll infinitely in each stage
+☢ Deeply Reactive, Directly Mutate State at any level to Update Component
 
-## My Process
+⚡ Blazing Fast - 25% faster than `useState`
 
-> Thinking like a Programmer is about having fun with problem-solving
+📺 No Extra Re-Renders - Auto Mutation batching
 
-### Understand the problem
+🌿 Always Fresh State, _unlike_ `useState`
 
-- Where are we going to store all of the applications?
-  - In an array
-- How are we going to process with local storage?
+🧬 Reactive Bindings For Inputs
 
-  - After finishing the main workflow, research into Firebase
+⚛ Reactive Props
 
-- What are we going to put inside the constructor?
+☕ Zero Dependencies, Ultra Light-Weight `< 1kb`
 
-  - Business Name (string)
-  - Position (string)
-  - Location (string)
-  - Superjob checkbox (boolean)
-  - Stage (string)
-  - link (string)
+<br/>
 
-- When clicking Submit, how to get the values from the form?
-
-  - Research different methods for getting values
-
-- How to identify every card?
-
-  - We could do it with an Id or Data-Attribute
-  - Get the first three letters of Company-Position-Location
-  - Add a new number
-
-- How to know in which stage the user adds a new card?
-
-  - Using data-attributes
-
-- How to organize classes in js?
-
-  - card class stage class
-
-- How to add each application to the display?
-  - Create a for loop and add all of the array items with appendchild to the container div
-- How to toggle between superwork or not?
-  - By creating a function that toggles between both stages
-- How to store data?
-  - Use Firebase so we can store all the data online, so when we log every time, the same job applications keep being there.
-
-### Pseudocode
-
-After reading the first chapter of the book "Think like a programmer", I wanted to put in practice that philosophy of "Always have a plan". For this purpose, I spend a few hours researching and thinking about the best way to implement each feature in plain english.
-
-```
-Create an empty array for storing all Applications
-Create function Constructor for new Applications (company, position, location, salary, superjob)
-  this company name = company
-  this position name = position
-  this location name = location
-Create function inside the prototype for Application for the superjob checkbox
-  if (superjob) then tick the checkbox
-Create function for adding new Applications to the ApplicationArray
-  Create new const for currentApplication = new App(newCompany, newPosition, newLocation, newSalary, newSuperjob)
-  const applicationArr.push(currentApplication)
-Add event listener for newApplication button
-  Display pop up with form so the user can get the input
-Add event listener for removing each application
-  Find the index of the application in the applicationArr given the data-attribute
-  Splice the array so you remove only that element
-Create a function that toggles the superjob status when onClick()
-  Get the data-attribute from the application clicked
-  Assign that superjob status on its object to true or false if checkbox is ticked or not
-
-```
-
-Obviously, after coding for a while, I had to re-arrange blocks and come up with solutions for a few other problems. Overall, it really helped me with speeding up the workflow.
+![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
 ### Useful Sources
 
@@ -137,6 +137,57 @@ Obviously, after coding for a while, I had to re-arrange blocks and come up with
 - [ ] Be able to open-up each position to see more details
 - [ ] Add a profile section to keep your data online or locally
 
-## Attribution
 
-- Made with love by Nicolás Ríos & Julen Diaz
+## ❓ FAQs
+
+<!-- faq 1 -->
+<details>
+<summary>Can I use useRS hook more than once ? </summary>
+<br/>
+
+**Yes.** You don't have to put all of the state of the component inside the state object. You can use the hook more than once.
+
+#### Example
+
+```javascript
+const todos = useRS([])
+const form = useRS({
+  name: '',
+  age: 0,
+})
+```
+
+While this is okay, **I would advise you to not do this**, Because putting all of state in one object gives you **better *performance** in the case of radioactive-state. (because of better mutation batching)
+
+It would also be **hard to store simple value types**, because simple value types can not be mutated and so you would need to wrap it inside an object.
+
+#### Example
+
+```javascript
+const count = useRS(0) // invalid, gives error ❌
+```
+
+```javascript
+const count = useRS( { value: 0 }) // works ✅
+```
+
+This would also make creating reactive bindings awkward. That's why it is **strongly recommended to store all the state into a single object** by using useRS only once !
+
+---
+</details>
+
+
+<!-- FAQ 2 -->
+<details>
+<summary> Is this magic, How does it work ? </summary>
+<br/>
+radioactive-state uses **JavaScript Proxy** to create a deeply reactive state by recursively proxifying the state. Whenever a mutation occurs in the state tree, a function is called with information about where the mutation took place which schedules an async re-render to update the component to reflect the changes in state to UI.
+</details>
+<br/>
+
+
+## Team
+
+[![Harsh Vijay](https://avatars1.githubusercontent.com/u/12688534?v=3&s=144)](https://github.com/iharsh234)  | [![Quandl.com](https://github.com/iharsh234/WebApp/blob/master/images/quandl.jpg)](https://www.quandl.com/)
+---|---
+[Harsh Vijay ](https://github.com/iharsh234) |[Quandl](https://www.quandl.com)
