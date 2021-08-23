@@ -6,6 +6,7 @@
   @include flex(column, center, center);
   @include addBackground("glass");
   min-width: 315px;
+  max-width: 315px;
   max-height: 95%;
   padding: 2em 0.5em;
   margin-bottom: 1em;
