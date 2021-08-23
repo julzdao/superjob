@@ -35,7 +35,7 @@ input[type=text]::placeholder {
 }
 
 html {
-  background: url("../../assets/images/gradient2.png") no-repeat center center fixed;
+  background: url("../assets/images/gradient2.png") no-repeat center center fixed;
   background-size: cover;
   scroll-behavior: smooth;
 }
@@ -164,7 +164,7 @@ button {
   height: 100%;
   top: 0px;
   left: 0px;
-  background: url(../../assets/images/gradient-modal.png), rgba(0, 0, 0, 0.315);
+  background: url(../assets/images/gradient-modal.png), rgba(0, 0, 0, 0.315);
   background-size: cover;
 }
 
@@ -418,7 +418,7 @@ input[type=checkbox]::before {
 }
 
 input[type=checkbox]:checked::before {
-  background-image: url(../../assets/icons/main-logo.svg);
+  background-image: url(../assets/icons/main-logo.svg);
   background-size: 1.3em 1.3em;
   background-position: center;
 }
