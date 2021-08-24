@@ -2,7 +2,7 @@
 
 ![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/125776757-b41cb3d5-bb40-4dc3-ba26-b7324808565b.png) 
 
-Go to the [Live Preview](#);
+Go to the [Live Preview](https://julendiaz.github.io/superjob/);
 
 <!-- TABLE OF CONTENTS -->
 <h2 id="table-of-contents"> :book: Table of Contents</h2>
