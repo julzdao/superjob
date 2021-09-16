@@ -92,7 +92,7 @@ const Form = (() => {
       //Clear inputs from form
       _clearInputs(inputs);
       //Selects all trash icons again
-      UI.deleteJobListener();
+      UI.moveJobToTrash();
 
     }
   });

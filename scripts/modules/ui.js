@@ -15,9 +15,6 @@ export default class UI {
   static addJobToStage(job) {
     //Select the stage to add the job
     const stage = document.querySelector(`[data-stage="${job.stage}"]`);
-    // // Update jobCounter with the number of jobs within the stage
-    // const jobsCounter = stage.parentElement.querySelector(".stage__stage-count"); 
-    // jobsCounter.innerHTML = `${stage.children.length + 1} jobs`;
     
     //Create card element with Job data
     const card = document.createElement("div");
@@ -66,15 +63,15 @@ export default class UI {
     UI.updateJobCounters();
   }
 
-  static deleteJobListener() {
+  static moveJobToTrash() {
     const trashIcons = document.querySelectorAll(".icon--trash");
     
     trashIcons.forEach(icon => {
       icon.addEventListener("click", () => {
-        const card = icon.closest(".card");
-        const id = card.id;
-        card.remove();
-        Storage.deleteJob(id);
+        const currentCard = icon.closest(".card");
+        const currentId = currentCard.id;
+        currentCard.remove();
+        Storage.deleteJob(currentId);
         UI.updateJobCounters();
       })
     })
