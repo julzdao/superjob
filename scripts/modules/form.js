@@ -1,6 +1,7 @@
 import Job from "./job.js";
 import Storage from "./localStorage.js";
-import UI from "./ui.js";
+import DOM from "./dom.js";
+import Editor from "./editor.js";
 import { Listeners } from "./listeners.js";
 import { Modals } from "./modals.js";
 
@@ -72,7 +73,7 @@ const Form = (() => {
 
   const _addJob = (job) => {
     Storage.saveJob(job);
-    UI.addJobToStage(job);
+    DOM.appendJob(job);
     Listeners.listenSupercheck();
     Listeners.listenErrorImg();
   };
@@ -92,7 +93,7 @@ const Form = (() => {
       //Clear inputs from form
       _clearInputs(inputs);
       //Selects all trash icons again
-      UI.moveJobToTrash();
+      Editor.moveJobToTrash();
 
     }
   });

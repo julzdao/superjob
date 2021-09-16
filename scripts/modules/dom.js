@@ -1,7 +1,7 @@
 import Storage from "./localStorage.js";
-export default class UI {
+export default class DOM {
   static displayJobs(jobs) {
-    jobs.forEach((job) => UI.addJobToStage(job));
+    jobs.forEach((job) => DOM.appendJob(job));
   }
 
   static checkSuperjob(checked) {
@@ -12,9 +12,9 @@ export default class UI {
     }
   }
 
-  static addJobToStage(job) {
+  static appendJob(job) {
     //Select the stage to add the job
-    const stage = document.querySelector(`[data-stage="${job.stage}"]`);
+    const selectedStage = document.querySelector(`[data-stage="${job.stage}"]`);
     
     //Create card element with Job data
     const card = document.createElement("div");
@@ -38,7 +38,7 @@ export default class UI {
       </div>
     </div>
     <div class="card__right-wrapper">
-      <input type="checkbox" class="supercheck" name="supercheck" ${UI.checkSuperjob(
+      <input type="checkbox" class="supercheck" name="supercheck" ${DOM.checkSuperjob(
         job.superjob
       )}>
       <span class="tag">${job.location}</span>                        
@@ -59,33 +59,17 @@ export default class UI {
     `;
 
     //Append card as the first child of the stage
-    stage.insertAdjacentElement("afterbegin", card);
-    UI.updateJobCounters();
+    selectedStage.insertAdjacentElement("afterbegin", card);
+    DOM.updateJobCounters();
   }
-
-  static moveJobToTrash() {
-    const trashIcons = document.querySelectorAll(".icon--trash");
-    
-    trashIcons.forEach(icon => {
-      icon.addEventListener("click", () => {
-        const currentCard = icon.closest(".card");
-        const currentId = currentCard.id;
-        currentCard.remove();
-        Storage.deleteJob(currentId);
-        UI.updateJobCounters();
-      })
-    })
-  };
 
   static updateJobCounters() {
     const jobCounters = document.querySelectorAll(".stage__stage-count");
     jobCounters.forEach((counter) => {
-      const stage = counter.parentElement.parentElement;
-      const stageContainer = stage.querySelector(".stage__card-container");
-      counter.innerHTML = `${stageContainer.children.length} jobs`;
+      const counterStage = counter.parentElement.parentElement;
+      const counterStageContainer = counterStage.querySelector(".stage__card-container");
+      counter.innerHTML = `${counterStageContainer.children.length} jobs`;
     })
   }
-
-  static showAlert() {}
-
+  
 }

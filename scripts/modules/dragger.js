@@ -1,5 +1,5 @@
 import Storage from "./localStorage.js";
-import UI from "./ui.js";
+import DOM from "./dom.js";
 
 const Dragger = (() => {
   /* Private props */
@@ -80,7 +80,7 @@ const Dragger = (() => {
       Storage.editJob(cardId, "stage", stageName);
 
       // Update jobCounter
-      UI.updateJobCounters();
+      DOM.updateJobCounters();
     },
     false
   );

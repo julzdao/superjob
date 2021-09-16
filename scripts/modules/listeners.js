@@ -1,6 +1,6 @@
 import Job from "./job.js";
 import Storage from "./localStorage.js";
-import UI from "./ui.js";
+import DOM from "./dom.js";
 import { Modals } from "./modals.js";
 
 const Listeners = (() => {
