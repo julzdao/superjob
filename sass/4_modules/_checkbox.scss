@@ -14,7 +14,6 @@ input[type="checkbox"]::before {
   width: 1.3em;
   height: 1.3em;
   border: 2px solid $black_800;
-  border-radius: 5px;
 }
 
 input[type="checkbox"]:checked::before {

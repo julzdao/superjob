@@ -44,21 +44,13 @@ export default class UI {
       <input type="checkbox" class="supercheck" name="supercheck" ${UI.checkSuperjob(
         job.superjob
       )}>
-      <span class="tag">${job.location}</span>                        
-    </div> 
-    <div class="card__down-wrapper">
-      <a href="${job.link}" class="button--link" draggable="false" target="_blank">Link</a>
-      <button class="icon icon--arrow" draggable="false"> 
-        <img src="./assets/icons/down-arrow.png" alt="expand icon" draggable="false">
-      </button>
-      <div>
-        <button class="icon icon--edit" draggable="false">
-          <img src="./assets/icons/edit.png" alt="edit icon" draggable="false">
-        </button>
+      <div class="card__links-wrapper>
+        <a href="${job.link}" class="button--link" draggable="false" target="_blank">Link</a>
         <button class="icon icon--trash" draggable="false"> 
           <img src="./assets/icons/trash.svg" alt="trash icon" draggable="false">
         </button>
-      </div>
+      </div>                       
+    </div> 
     `;
 
     //Append card as the first child of the stage

@@ -14,7 +14,7 @@ const Listeners = (() => {
         //If the checkbox is checked, add supercard class otherwise remove it.
         //Save changes to storage
         if(checkbox.checked){
-          card.classList.add("card--supercard")
+          card.classList.add("card--supercard");
           Storage.editJob(id, "superjob", true);
         } else {
           card.classList.remove("card--supercard");

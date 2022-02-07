@@ -6,7 +6,6 @@
   @include flex(0, center, center);
   width: 46px;
   height: 46px;
-  border-radius: 50%;
   color: $black_800;
   font-size: 2.2rem;
   font-weight: weight(super);
@@ -14,7 +13,6 @@
   img {
     width: 100%;
     height: 100%;
-    border-radius: 50%;
   }
 }
 
