@@ -13,7 +13,8 @@ input[type="checkbox"]::before {
   display: inline-block;
   width: 1.3em;
   height: 1.3em;
-  border: 2px solid $black_800;
+  border: 3px solid #cecece;
+  transition: 0.2s;
 }
 
 input[type="checkbox"]:checked::before {

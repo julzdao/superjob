@@ -38,7 +38,7 @@
     }
 
     input[type="checkbox"]::before {
-      border: 2px solid rgba(255, 255, 255, 0.205);
+      border: 2px solid $black_800;
     }
 
     &:hover {
