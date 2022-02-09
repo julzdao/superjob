@@ -1,6 +1,6 @@
 # Superjob - The Odin Project
 
-![Frame 1portadagithub](https://user-images.githubusercontent.com/66780327/125776757-b41cb3d5-bb40-4dc3-ba26-b7324808565b.png) 
+![portada](https://user-images.githubusercontent.com/66780327/153207325-b04958aa-e276-4808-a674-2e37763b69d4.png)
 
 Go to the [Live Preview](https://julendiaz.github.io/superjob/);
 
@@ -109,15 +109,10 @@ Even though we are still working on it, we have decided to share it with the com
 
 <h2 id="screenshots"> 📷 Screenshots </h2>
 
-![fullscreen](https://user-images.githubusercontent.com/66780327/130353281-3aea537f-00b3-4099-8fdd-c8a18426b8ea.png)
-
-![supercard](https://user-images.githubusercontent.com/66780327/130353300-db8bed27-678f-4a4c-a89f-8ea9e68b66eb.png)
-
-![whitecard](https://user-images.githubusercontent.com/66780327/130353307-4e25351c-24fd-4362-92dd-646d50e3593e.png)
-
-![form](https://user-images.githubusercontent.com/66780327/130353313-2dd04e3f-9921-4277-bb47-cf833511d8e8.png)
-
-![form-validation](https://user-images.githubusercontent.com/66780327/130353330-5d87786a-2ec3-41a3-9e49-ec618a58ab5c.png)
+<img width="1047" alt="screenshotzero" src="https://user-images.githubusercontent.com/66780327/153207542-fa9dac0d-9938-48a3-84c8-4ba97c3a5ec1.PNG">
+<img width="1035" alt="form" src="https://user-images.githubusercontent.com/66780327/153207526-555fe256-0752-477b-83cd-f513d60c9403.PNG">
+<img width="231" alt="stagescreenshot" src="https://user-images.githubusercontent.com/66780327/153207545-2341533a-4a5d-4a8b-b224-df8c1c7067c5.PNG">
+<img width="268" alt="card" src="https://user-images.githubusercontent.com/66780327/153207547-ba7a7e1f-f46e-468a-b8a9-e5b6407a416b.PNG">
 
 ![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/rainbow.png)
 
