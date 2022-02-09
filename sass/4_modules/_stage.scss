@@ -4,7 +4,7 @@
 
 .stage {
   @include flex(column, center, center);
-  @include addBackground("glass");
+  background-color: rgb(255, 255, 255);
   min-width: 315px;
   max-width: 315px;
   max-height: 95%;
@@ -12,6 +12,8 @@
   margin-bottom: 1em;
   text-align: center;
   margin-top: 1em;
+  transition: 0.2s;
+  border-top: solid 8px #F3DF26;
 
   &__card-container {
     width: 100%;
@@ -23,8 +25,12 @@
     font-weight: weight(regular);
   }
 
+  &:hover {
+    background-color: #F1F1F1;
+  }
+
   @include tablet {
-    margin-right: 1.5em;
+    // margin-right: 1.5em;
     &:last-child {
       margin-right: unset;
     }
@@ -41,3 +47,19 @@
     }
   }
 }
+
+#stage-applied {
+  border-top: solid 8px #4C6FFF;
+}
+
+#stage-interview {
+  border-top: solid 8px #F34B26;
+}
+
+#stage-offer {
+  border-top: solid 8px #26F36B;
+}
+#stage-other {
+  border-top: solid 8px #333333;
+}
+

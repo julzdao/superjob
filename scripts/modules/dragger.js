@@ -81,6 +81,7 @@ const Dragger = (() => {
 
       // Update jobCounter
       UI.updateJobCounters();
+      UI.changeBorderSuperjob();
     },
     false
   );

@@ -35,7 +35,7 @@ input[type=text]::placeholder {
 }
 
 html {
-  background-color: #9e9e9e;
+  background-color: white;
   background-size: cover;
   scroll-behavior: smooth;
 }
@@ -68,10 +68,6 @@ button {
 }
 
 .main-container {
-  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 31px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +75,7 @@ button {
   padding: 2em 1em;
   width: 90%;
   min-width: 340px;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 @media (min-width: 768px) {
   .main-container {
@@ -98,7 +94,6 @@ button {
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.055) 0px 10px 10px;
   background-color: rgba(240, 240, 240, 0.938);
-  border-radius: 25px;
   width: 90%;
   min-width: 220px;
   max-width: 380px;
@@ -112,7 +107,8 @@ button {
 }
 .form-container__logo {
   box-shadow: rgba(0, 0, 0, 0.109) 0px 10px 10px;
-  border-radius: 10px;
+  width: 3em;
+  height: auto;
   position: absolute;
   top: -20px;
   left: 220px/2;
@@ -212,10 +208,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 31px;
+  background-color: white;
   min-width: 315px;
   max-width: 315px;
   max-height: 95%;
@@ -223,6 +216,8 @@ button {
   margin-bottom: 1em;
   text-align: center;
   margin-top: 1em;
+  transition: 0.2s;
+  border-top: solid 8px #F3DF26;
 }
 .stage__card-container {
   width: 100%;
@@ -233,10 +228,10 @@ button {
 .stage__stage-count {
   font-weight: 300;
 }
+.stage:hover {
+  background-color: #F1F1F1;
+}
 @media (min-width: 768px) {
-  .stage {
-    margin-right: 1.5em;
-  }
   .stage:last-child {
     margin-right: unset;
   }
@@ -250,6 +245,22 @@ button {
     height: 100vh;
     max-height: 100vh;
   }
+}
+
+#stage-applied {
+  border-top: solid 8px #4C6FFF;
+}
+
+#stage-interview {
+  border-top: solid 8px #F34B26;
+}
+
+#stage-offer {
+  border-top: solid 8px #26F36B;
+}
+
+#stage-other {
+  border-top: solid 8px #333333;
 }
 
 .circular-img {
@@ -329,12 +340,14 @@ button {
 .card__company-title {
   font-size: 0.9rem;
   font-weight: 700;
-  margin-bottom: -0.2em;
+  margin-bottom: 0em;
 }
 .card__position-title {
   font-weight: 300;
   font-size: 0.8rem;
-  color: #3B3B3B;
+}
+.card__links-wrapper {
+  margin-top: 0.5em;
 }
 .card__right-wrapper {
   display: flex;
@@ -372,7 +385,6 @@ button {
   transition: all 250ms ease;
   background-color: #3B3B3B;
   color: #ffffff;
-  border-radius: 10px;
   padding: 0 0.5em;
   margin: 1em 0;
   font-size: 1.7rem;
@@ -389,7 +401,6 @@ button {
 .button--link {
   border: 1px solid #4475cf;
   color: #4475cf;
-  border-radius: 4px;
   width: 3.8em;
   height: 1.6em;
   font-size: 0.7em;
@@ -530,7 +541,6 @@ input[type=checkbox]:checked::before {
           appearance: none;
   outline: none;
   border: 2px solid rgba(38, 38, 39, 0.05);
-  border-radius: 8px;
   color: #262627;
 }
 .form__input:focus {
@@ -564,8 +574,8 @@ input[type=checkbox]:checked::before {
 }
 
 .icon {
-  width: 1.1em;
-  height: 1.1em;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: 0.2em;
 }
 .icon img {
@@ -574,6 +584,12 @@ input[type=checkbox]:checked::before {
 }
 .icon img:hover {
   opacity: 1;
+}
+.icon--trash {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.2em;
+  margin-top: -0.3em;
 }
 .icon--edit {
   width: 1em;

@@ -65,13 +65,17 @@
   &__company-title {
     font-size: 0.9rem;
     font-weight: weight(super);
-    margin-bottom: -0.2em;
+    margin-bottom: -0em;
   }
 
   &__position-title {
     font-weight: weight(regular);
     font-size: 0.8rem;
-    color: $black_700;
+    // color: $black_700;
+  }
+
+  &__links-wrapper {
+    margin-top: 0.5em;
   }
 
   &__right-wrapper {

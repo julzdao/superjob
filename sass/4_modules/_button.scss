@@ -6,7 +6,6 @@
   @include addTransition();
   background-color: $black_700;
   color: $white_0;
-  border-radius: 10px;
   padding: 0 0.5em;
   margin: 1em 0;
   font-size: 1.7rem;
@@ -23,7 +22,6 @@
 .button--link {
   border: 1px solid rgb(68, 117, 207);
   color: rgb(68, 117, 207);
-  border-radius: 4px;
   width: 3.8em;
   height: 1.6em;
   font-size: 0.7em;

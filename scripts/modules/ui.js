@@ -40,14 +40,17 @@ export default class UI {
           <h3 class="card__position-title">${job.position}</h3>
       </div>
     </div>
+
     <div class="card__right-wrapper">
       <input type="checkbox" class="supercheck" name="supercheck" ${UI.checkSuperjob(
         job.superjob
       )}>
-      <div class="card__links-wrapper>
-        <a href="${job.link}" class="button--link" draggable="false" target="_blank">Link</a>
+      <div class="card__links-wrapper">
         <button class="icon icon--trash" draggable="false"> 
           <img src="./assets/icons/trash.svg" alt="trash icon" draggable="false">
+        </button>
+        <button class="icon icon--link" draggable="false" onclick="location.href='${job.link}'" type="button">
+          <img src="./assets/icons/icon_link.svg" alt="link icon" draggable="false">
         </button>
       </div>                       
     </div> 
@@ -56,6 +59,7 @@ export default class UI {
     //Append card as the first child of the stage
     stage.insertAdjacentElement("afterbegin", card);
     UI.updateJobCounters();
+    UI.changeBorderSuperjob();
   }
 
   static deleteJobListener() {
@@ -78,6 +82,37 @@ export default class UI {
       const stage = counter.parentElement.parentElement;
       const stageContainer = stage.querySelector(".stage__card-container");
       counter.innerHTML = `${stageContainer.children.length} jobs`;
+    })
+  }
+
+  static changeBorderSuperjob () {
+    const cards = document.querySelectorAll(".card");
+    cards.forEach((card) => {
+      const stage = card.parentElement;
+      const stageCategory = stage.dataset.stage;
+      console.log(card, stageCategory);
+      if (card.classList.contains("card--supercard")) {
+        switch (stageCategory) {
+          case "wish-list":
+            card.style.border = "8px solid #F3DF26";
+            break;
+          case "applied":
+            card.style.border = "8px solid #4C6FFF";
+            break;
+          case "interview":
+            card.style.border = "8px solid #F34B26";
+            break;
+          case "offer":
+            card.style.border = "8px solid #26F36B";
+            break;
+          case "other":
+            card.style.border = "8px solid black";
+            break;
+        }
+      } else {
+        card.style.border = "8px solid #E6E6E6";
+      }
+      
     })
   }
 
