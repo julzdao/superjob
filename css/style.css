@@ -145,6 +145,18 @@ button {
   }
 }
 
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attribution p {
+  text-align: right;
+  font-size: 0.8em;
+}
+
 @media (min-width: 768px) {
   header {
     align-self: center;
@@ -190,11 +202,13 @@ button {
 .main-logo .main-logo__title {
   font-weight: 700;
   line-height: 0.8;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  margin-top: 0.2em;
 }
 .main-logo .main-logo__subtitle {
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  margin-top: 0.1em;
 }
 @media (min-width: 768px) {
   .main-logo {
@@ -432,6 +446,7 @@ input[type=checkbox]:checked::before {
   background-image: url(../assets/icons/main-logo.svg);
   background-size: 1.3em 1.3em;
   background-position: center;
+  border: none;
 }
 
 .form {
@@ -450,7 +465,7 @@ input[type=checkbox]:checked::before {
   align-self: flex-start;
   margin-left: 0.8em;
   padding: 5px;
-  width: 7em;
+  width: 9em;
 }
 .form .input-container {
   overflow-y: auto;

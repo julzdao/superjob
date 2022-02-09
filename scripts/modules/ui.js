@@ -69,9 +69,13 @@ export default class UI {
       icon.addEventListener("click", () => {
         const card = icon.closest(".card");
         const id = card.id;
-        card.remove();
-        Storage.deleteJob(id);
-        UI.updateJobCounters();
+        const result = confirm("Are you sure you want to delete this job?");
+        if (result) {
+          card.remove();
+          Storage.deleteJob(id);
+          UI.updateJobCounters();
+        }
+        
       })
     })
   };
