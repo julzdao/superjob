@@ -9,10 +9,11 @@
   flex-wrap: wrap;
   width: 100%;
   min-height: 88px;
-  background-color: rgba(255, 255, 255, 0.829);
-  border-radius: 10px;
-  padding: 0.6em 1em 0.2em 1em;
+  background-color: #FDFDFD;
+  padding: 0.6em 1em 0.6em 1em;
   margin-bottom: 0.8em;
+  border: 8px solid #E6E6E6;
+  box-sizing: border-box;
   cursor: pointer;
 
   &:hover {
@@ -37,7 +38,7 @@
     }
 
     input[type="checkbox"]::before {
-      border: 2px solid rgba(255, 255, 255, 0.205);
+      border: 2px solid $black_800;
     }
 
     &:hover {
@@ -60,16 +61,23 @@
     @include flex(column, flex-start, flex-start);
     margin-left: 0.8em;
   }
+
   &__company-title {
-    font-size: 1rem;
-    font-weight: weight(bold);
-    margin-bottom: -0.2em;
+    font-size: 0.9rem;
+    font-weight: weight(super);
+    margin-bottom: -0em;
   }
+
   &__position-title {
     font-weight: weight(regular);
-    font-size: 0.9rem;
-    color: $gray;
+    font-size: 0.8rem;
+    // color: $black_700;
   }
+
+  &__links-wrapper {
+    margin-top: 0.5em;
+  }
+
   &__right-wrapper {
     @include flex(column, flex-end, space-between);
     height: 45px;

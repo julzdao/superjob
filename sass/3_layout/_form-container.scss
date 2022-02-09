@@ -5,7 +5,6 @@
   @include flex(column, center, space-between);
   @include addBoxShadow();
   background-color: rgba(240, 240, 240, 0.938);
-  border-radius: 25px;
   width: 90%;
   min-width: 220px;
   max-width: 380px;
@@ -20,7 +19,8 @@
 
   &__logo {
     @include addBoxShadow(rgba(0, 0, 0, 0.109));
-    border-radius: 10px;
+    width: 3em;
+    height: auto;
     position: absolute;
     top: -20px;
     left: 220px/2;

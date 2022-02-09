@@ -17,17 +17,20 @@
                 <img src="./assets/icons/main-logo.svg" alt="Superjob 'S' Icon" srcset="" class="main-logo__icon">
                 <div class="main-logo__title-wrapper">
                     <h1 class="main-logo__title">
-                        superjob
+                        Superjob
                     </h1>
                     <h2 class="main-logo__subtitle">
                         track the best jobs
                     </h2>
                 </div>
             </div>
+            <div class="attribution">
+                <p><strong>Made by</strong><br />Nicolás Ríos and Julen Diaz</p>
+            </div>
         </header>
         
         <div class="stage-container">
-            <div class="stage">
+            <div class="stage" id="stage-wish">
                 <div class="stage__text-wrapper">
                     <h3 class="stage__stage-title">Wish List</h1>
                     <h4 class="stage__stage-count">0 jobs</h1>
@@ -36,7 +39,7 @@
                 <div class="stage__card-container" data-stage="wish-list" >
                 </div>
             </div>
-            <div class="stage">
+            <div class="stage" id="stage-applied">
                 <div class="stage__text-wrapper">
                     <h3 class="stage__stage-title">Applied</h1>
                     <h4 class="stage__stage-count">0 jobs</h1>
@@ -45,16 +48,7 @@
                 <div class="stage__card-container" data-stage="applied" >
                 </div>
             </div>
-            <div class="stage">
-                <div class="stage__text-wrapper">
-                    <h3 class="stage__stage-title">Phone</h1>
-                    <h4 class="stage__stage-count">0 jobs</h1>
-                </div>
-                <button class="button button--long" data-button="phone">+</button>
-                <div class="stage__card-container" data-stage="phone">
-                </div>
-            </div>
-            <div class="stage">
+            <div class="stage" id="stage-interview">
                 <div class="stage__text-wrapper">
                     <h3 class="stage__stage-title">Interview</h1>
                     <h4 class="stage__stage-count">0 jobs</h1>
@@ -63,13 +57,22 @@
                 <div class="stage__card-container" data-stage="interview">
                 </div>
             </div>
-            <div class="stage">
+            <div class="stage" id="stage-offer">
                 <div class="stage__text-wrapper">
                     <h3 class="stage__stage-title">Offer</h1>
+                        <h4 class="stage__stage-count">0 jobs</h1>
+                    </div>
+                    <button class="button button--long" data-button="offer">+</button>
+                    <div class="stage__card-container" data-stage="offer">
+                    </div>
+                </div>
+            <div class="stage" id="stage-other">
+                <div class="stage__text-wrapper">
+                    <h3 class="stage__stage-title">Other</h1>
                     <h4 class="stage__stage-count">0 jobs</h1>
                 </div>
-                <button class="button button--long" data-button="offer">+</button>
-                <div class="stage__card-container" data-stage="offer">
+                <button class="button button--long" data-button="other">+</button>
+                <div class="stage__card-container" data-stage="other">
                 </div>
             </div>
         </div>

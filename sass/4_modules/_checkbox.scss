@@ -13,12 +13,13 @@ input[type="checkbox"]::before {
   display: inline-block;
   width: 1.3em;
   height: 1.3em;
-  border: 2px solid $black_800;
-  border-radius: 5px;
+  border: 3px solid #cecece;
+  transition: 0.2s;
 }
 
 input[type="checkbox"]:checked::before {
   background-image: url(../assets/icons/main-logo.svg);
   background-size: 1.3em 1.3em;
   background-position: center;
+  border: none;
 }

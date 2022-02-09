@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Saira:wght@100;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 *,
 *::before,
 *::after {
@@ -28,20 +28,20 @@ input[type=text]::placeholder {
 }
 
 :root {
-  font-family: "Saira", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 16px;
   color: #262627;
   font-weight: weight(super);
 }
 
 html {
-  background: url("../assets/images/gradient2.png") no-repeat center center fixed;
+  background-color: white;
   background-size: cover;
   scroll-behavior: smooth;
 }
 
 body {
-  color: #39393a;
+  color: #3B3B3B;
   min-width: 100%;
   min-height: 100vh;
   display: flex;
@@ -52,7 +52,7 @@ body {
 
 button {
   cursor: pointer;
-  font-family: "Saira", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 @media (min-width: 768px) {
@@ -68,10 +68,6 @@ button {
 }
 
 .main-container {
-  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 31px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +75,7 @@ button {
   padding: 2em 1em;
   width: 90%;
   min-width: 340px;
-  min-height: 90vh;
+  min-height: 100vh;
 }
 @media (min-width: 768px) {
   .main-container {
@@ -98,7 +94,6 @@ button {
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.055) 0px 10px 10px;
   background-color: rgba(240, 240, 240, 0.938);
-  border-radius: 25px;
   width: 90%;
   min-width: 220px;
   max-width: 380px;
@@ -112,7 +107,8 @@ button {
 }
 .form-container__logo {
   box-shadow: rgba(0, 0, 0, 0.109) 0px 10px 10px;
-  border-radius: 10px;
+  width: 3em;
+  height: auto;
   position: absolute;
   top: -20px;
   left: 220px/2;
@@ -147,6 +143,18 @@ button {
   .form-container .button--long {
     font-size: 1.3em;
   }
+}
+
+header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attribution p {
+  text-align: right;
+  font-size: 0.8em;
 }
 
 @media (min-width: 768px) {
@@ -194,11 +202,13 @@ button {
 .main-logo .main-logo__title {
   font-weight: 700;
   line-height: 0.8;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  margin-top: 0.2em;
 }
 .main-logo .main-logo__subtitle {
   font-weight: 200;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
+  margin-top: 0.1em;
 }
 @media (min-width: 768px) {
   .main-logo {
@@ -212,10 +222,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(91.21% 191.68% at 4.19% 5.58%, rgba(255, 255, 255, 0.42) 0%, rgba(255, 255, 255, 0.072) 100%);
-  border: 2px solid rgba(255, 255, 255, 0.33);
-  box-sizing: border-box;
-  border-radius: 31px;
+  background-color: white;
   min-width: 315px;
   max-width: 315px;
   max-height: 95%;
@@ -223,6 +230,8 @@ button {
   margin-bottom: 1em;
   text-align: center;
   margin-top: 1em;
+  transition: 0.2s;
+  border-top: solid 8px #F3DF26;
 }
 .stage__card-container {
   width: 100%;
@@ -233,10 +242,10 @@ button {
 .stage__stage-count {
   font-weight: 300;
 }
+.stage:hover {
+  background-color: #F1F1F1;
+}
 @media (min-width: 768px) {
-  .stage {
-    margin-right: 1.5em;
-  }
   .stage:last-child {
     margin-right: unset;
   }
@@ -252,6 +261,22 @@ button {
   }
 }
 
+#stage-applied {
+  border-top: solid 8px #4C6FFF;
+}
+
+#stage-interview {
+  border-top: solid 8px #F34B26;
+}
+
+#stage-offer {
+  border-top: solid 8px #26F36B;
+}
+
+#stage-other {
+  border-top: solid 8px #333333;
+}
+
 .circular-img {
   display: flex;
   flex-direction: 0;
@@ -259,7 +284,6 @@ button {
   justify-content: center;
   width: 46px;
   height: 46px;
-  border-radius: 50%;
   color: #262627;
   font-size: 2.2rem;
   font-weight: 700;
@@ -267,7 +291,6 @@ button {
 .circular-img img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
 }
 
 .card {
@@ -279,10 +302,11 @@ button {
   flex-wrap: wrap;
   width: 100%;
   min-height: 88px;
-  background-color: rgba(255, 255, 255, 0.829);
-  border-radius: 10px;
-  padding: 0.6em 1em 0.2em 1em;
+  background-color: #FDFDFD;
+  padding: 0.6em 1em 0.6em 1em;
   margin-bottom: 0.8em;
+  border: 8px solid #E6E6E6;
+  box-sizing: border-box;
   cursor: pointer;
 }
 .card:hover {
@@ -295,7 +319,7 @@ button {
   transform: rotate(-2deg);
 }
 .card--supercard {
-  background-color: #39393a;
+  background-color: #3B3B3B;
   color: #ffffff;
 }
 .card--supercard .tag {
@@ -303,7 +327,7 @@ button {
   color: #ffffff;
 }
 .card--supercard input[type=checkbox]::before {
-  border: 2px solid rgba(255, 255, 255, 0.205);
+  border: 2px solid #262627;
 }
 .card--supercard:hover {
   background-color: #262627;
@@ -328,14 +352,16 @@ button {
   margin-left: 0.8em;
 }
 .card__company-title {
-  font-size: 1rem;
-  font-weight: 500;
-  margin-bottom: -0.2em;
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 0em;
 }
 .card__position-title {
   font-weight: 300;
-  font-size: 0.9rem;
-  color: #9D9D9D;
+  font-size: 0.8rem;
+}
+.card__links-wrapper {
+  margin-top: 0.5em;
 }
 .card__right-wrapper {
   display: flex;
@@ -371,9 +397,8 @@ button {
 
 .button {
   transition: all 250ms ease;
-  background-color: #39393a;
+  background-color: #3B3B3B;
   color: #ffffff;
-  border-radius: 10px;
   padding: 0 0.5em;
   margin: 1em 0;
   font-size: 1.7rem;
@@ -390,7 +415,6 @@ button {
 .button--link {
   border: 1px solid #4475cf;
   color: #4475cf;
-  border-radius: 4px;
   width: 3.8em;
   height: 1.6em;
   font-size: 0.7em;
@@ -414,14 +438,15 @@ input[type=checkbox]::before {
   display: inline-block;
   width: 1.3em;
   height: 1.3em;
-  border: 2px solid #262627;
-  border-radius: 5px;
+  border: 3px solid #cecece;
+  transition: 0.2s;
 }
 
 input[type=checkbox]:checked::before {
   background-image: url(../assets/icons/main-logo.svg);
   background-size: 1.3em 1.3em;
   background-position: center;
+  border: none;
 }
 
 .form {
@@ -440,7 +465,7 @@ input[type=checkbox]:checked::before {
   align-self: flex-start;
   margin-left: 0.8em;
   padding: 5px;
-  width: 7em;
+  width: 9em;
 }
 .form .input-container {
   overflow-y: auto;
@@ -531,11 +556,10 @@ input[type=checkbox]:checked::before {
           appearance: none;
   outline: none;
   border: 2px solid rgba(38, 38, 39, 0.05);
-  border-radius: 8px;
   color: #262627;
 }
 .form__input:focus {
-  border: solid 3px #39393a;
+  border: solid 3px #3B3B3B;
 }
 .form__input::-moz-placeholder {
   color: rgba(0, 0, 0, 0.479);
@@ -565,8 +589,8 @@ input[type=checkbox]:checked::before {
 }
 
 .icon {
-  width: 1.1em;
-  height: 1.1em;
+  width: 1.5em;
+  height: 1.5em;
   margin-left: 0.2em;
 }
 .icon img {
@@ -575,6 +599,12 @@ input[type=checkbox]:checked::before {
 }
 .icon img:hover {
   opacity: 1;
+}
+.icon--trash {
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.2em;
+  margin-top: -0.3em;
 }
 .icon--edit {
   width: 1em;
