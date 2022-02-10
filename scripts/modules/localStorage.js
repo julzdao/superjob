@@ -1,3 +1,5 @@
+import { defaultJobs } from "./defaultJobs.js";
+
 export default class Storage {
   static saveJob(job) {
     //Get job array from local, if null, create new empty array
@@ -15,7 +17,7 @@ export default class Storage {
   }
 
   static getJobs() {
-    return JSON.parse(localStorage.getItem("jobApplications")) || [];
+    return JSON.parse(localStorage.getItem("jobApplications")) || defaultJobs;
   }
 
   static getJob(jobId) {
